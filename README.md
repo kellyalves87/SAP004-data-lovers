@@ -47,6 +47,12 @@ Após nossa pesquisa e mapeamento, desenvolvemos um novo protótipo de baixa qua
 
 ## 5. Protótipo de alta qualidade
 
-Decidimos por fazer um protótipo de alta fidelidade para visualizar melhor nosso projeto e verificar se todo o nosso mapeamento está de acordo com o que entregaremos. ![Página Inicial](pagina-inicial.png) ![Personagens](personagens.png) ![Temporadas](temporadas.png)
+Decidimos por fazer um protótipo de alta fidelidade para visualizar melhor nosso projeto e verificar se todo o nosso mapeamento está de acordo com o que entregaremos. 
+
+![Página Inicial](/assets/pagina-inicial.png) 
+
+![Personagens](/assets/personagens.png) 
+
+![Temporadas](/assets/temporadas.jpeg)
 
 

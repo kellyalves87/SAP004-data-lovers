@@ -1,7 +1,120 @@
 body{
-    background-image: url('rick-and-mortyy.jpeg');
-    background-repeat: no-repeat;
+    background-image: url('rick&morty.jpeg');
+    background-repeat: no-repeat fixed;
     background-size: cover;
-    font-family: 'Oswald', sans-serif;    
+    overflow-x: hidden; /*tira a barra horizontal de rolagem*/
 }
+
+.navbar {
+    top: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13pt;
+}
+.menu {
+    float: left;
+    overflow: hidden;
+}
+.menu .botao-menu {
+    font-size: 18px; 
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Oswald', sans-serif;
+}
+.menu-lista {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 160px;
+    box-shadow: 0px 5px 15px 0px black;
+}
+.menu-lista a {
+    float: none;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.menu-lista a:hover {
+    background-color: rgba(145, 143, 143, 0.644);
+}
+.menu:hover .menu-lista {
+    display: block;
+}
+.barra-de-pesquisa {
+    float: right;
+    margin: 10px 25px 10px;
+}
+.enter img{  
+    width: 15px;
+    height: 15px;
+}
+.enter{
+    border: none;
+    background-color: white;
+    padding: 5px;
+}
+.pesquisa{
+    color: black;
+    border: none;
+    border-bottom: 1.5px solid black;
+    width: 200px;
+    outline: none;
+}
+.pesquisa::placeholder {
+    color: grey;
+    font-size: 15px;
+}
+.resumo{
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13pt;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 170px;    
+    padding: 2px;
+    line-height: 10mm;
+    padding-left: 10mm;
+    padding-right: 10mm
+}
+.resumo a{
+  color: inherit;
+}
+footer{
+    font-family: 'Oswald', sans-serif;
+    font-size: 13pt;
+    color: white;
+}
+.social-media{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 40%;
+}
+.redes{
+    border: 2px solid rgb(119, 131, 106);
+    border-radius: 50%;
+    display: inline-block;
+    fill: rgb(119, 131, 106);
+    height: 35px; 
+    line-height: 32px;
+    text-align: center;
+    width: 35px;
+}
+.social-media .redes {
+    background: white;
+    color: #02b1c8;
+}
+.seguir{
+    font-size: 25px;
+    text-align: left;
+    padding-left: 5mm;
+}
+ 
 
