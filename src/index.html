@@ -14,23 +14,24 @@
      <img src="logo-rick-and-morty.png" alt="rickandmorty" width=150 height=80>
     </header>
   <nav id="nav" class="navbar">
+    <li><a href="index.html">Home</a></li>
     <li><a href="#">Personagens</a></li>
       <ul> 
-        <li><a href="#">Ordem Alfabetica</a></li> 
-        <li><a href="#">Status</a></li> 
-        <li><a href="#">Localização</a></li>
+        <li><a href="#" id="ordem-alfabetica">Ordem Alfabetica</a></li> 
+        <li><a href="#" id="status">Status</a></li> 
+        <li><a href="#" id="localizacao">Localização</a></li>
       </ul>  
     <li><a href="#">Temporadas</a></li> 
       <ul> 
-        <li><a href="#">Episódio</a></li> 
-        <li><a href="#">Personagem</a></li> 
-        <li><a href="#">Nome Episódio</a></li> 
+        <li><a href="#" id="episodio">Episódio</a></li> 
+        <li><a href="#" id="personagem">Personagem</a></li> 
+        <li><a href="#" id="nome-episodio">Nome Episódio</a></li> 
       </ul> 
     </li>
   </nav>
   <div class="pesquisa">
-    <input type="text" placeholder="Pesquisar por nome">
-    <button type="submit">&#128269</button>
+    <input type="text" id="text" placeholder="Pesquisar por nome">
+    <button id="send" type="submit">&#128269</button>
   </div>
   <section class="resumo">
     <p>
@@ -52,7 +53,9 @@
   <footer>
     <p>© Desenvolvido por Aline Souza e Kelly Alves</p>
   </footer>
-
+  
+  <script src="data/rickandmorty/rickandmorty.js"></script>
+  <script src="data.js"></script>
   <script src="main.js" type="module"></script>
   </body>
 </html>

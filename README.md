@@ -6,6 +6,7 @@
 * [2. Histórias de usuário](#2-historias-de-usuario)
 * [3. Desenho de interface de usuário](#3-desenho-de-interface-de-usuario)
 * [4. Protótipo de baixa qualidade](#4-prototipo-de-baixa-qualidade)
+* [5. Protótipo de alta qualidade](#5-prototipo-de-alta-qualidae)
 
 ***
 
@@ -42,5 +43,10 @@ Porém, após toda a nossa pesquisa identificamos que não seria funcional ter u
 
 ## 4. Protótipo de baixa qualidade
 
-Após nossa pesquisa e mapeamento, desenvolvemos um novo protótipo de baixa qualidade onde o usuário teria um menu de personagens e temporadas na página principal e dentro de cada item do menu, o usuário tem disponível um filtro onde pode buscar por ordem alfabetica, nome de personagem, episódios, temporadas, etc. Você pode visualizá-lo [**aqui**](/assets/PrototipoFinal.png).
+Após nossa pesquisa e mapeamento, desenvolvemos um novo protótipo de baixa qualidade onde o usuário teria um menu dropdwn de personagens e temporadas na página principal e dentro de cada item do menu, o usuário tem disponível um filtro onde pode buscar por ordem alfabetica, nome de personagem, episódios, temporadas, etc. Você pode visualizá-lo [**aqui**](/assets/PrototipoFinal.png).
+
+## 5. Protótipo de alta qualidade
+
+Decidimos por fazer um protótipo de alta fidelidade para visualizar melhor nosso projeto e verificar se todo o nosso mapeamento está de acordo com o que entregaremos. ![Página Inicial](pagina-inicial.png) ![Personagens](personagens.png) ![Temporadas](temporadas.png)
+
 
