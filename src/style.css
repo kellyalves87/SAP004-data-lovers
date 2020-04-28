@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat fixed;
     background-size: cover;
     overflow-x: hidden; /*tira a barra horizontal de rolagem*/
+    margin: 0;
 }
 
 .navbar {
@@ -83,7 +84,7 @@ body{
     padding-right: 10mm
 }
 .resumo a{
-  color: inherit;
+    color: inherit;
 }
 footer{
     font-family: 'Oswald', sans-serif;
