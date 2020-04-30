@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Rick and Morty</title>
+  <link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <img src="logo-rick-and-morty.png" alt="rickandmorty" width=250 height=150>
+  </header>
+  <nav class="navbar">
+    <div class="menu">
+      <button id="status" class="botao-menu">Status
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="menu-lista">
+        <a id="vivo" href="#">Vivo</a>
+        <a id="morto" href="#">Morto</a>
+        <a id="desconhecido" href="#">Desconhecido</a>
+      </div>
+    </div>
+    <div class="menu">
+      <button id="genero" class="botao-menu">Gênero
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="menu-lista">
+        <a id="feminino" href="#">Feminino</a>
+        <a id="masculino" href="#">Masculino</a>
+        <a id="sem-genero" href="#">Sem gênero</a>
+        <a id="indefinido" href="#">Indefinido</a>
+      </div>
+    </div>
+    <div class="menu">
+      <button id="especie" class="botao-menu">Espécie
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="menu-lista">
+        <a id="humano" href="#">Humano</a>
+        <a id="humanoide" href="#">Humanoide</a>
+        <a id="alien" href="#">Alien</a>
+        <a id="animal" href="#">Animal</a>
+      </div>
+    </div>
+    <div class="menu">
+      <button id="temporadas" class="botao-menu">Temporadas
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="menu-lista">
+        <a id="temp-um" href="#">Temp 1</a>
+        <a id="temp-dois" href="#">Temp 2</a>
+        <a id="temp-tres" href="#">Temp 3</a>
+        <a id="temp-quatro" href="#">Temp 4</a>
+      </div>
+    </div>
+    <label class="barra-de-pesquisa">
+      <input type="text" class="pesquisa" id="buscar" placeholder="Pesquisar por nome...">
+      <button id="busca" class="enter"><img src="search-icon.png"></button>
+    </label>
+  </nav>
+  <section class="resumo">
+    <p>A série Rick and Morty foi criada em 2013 por <a href="https://pt.wikipedia.org/wiki/Justin_Roiland"
+        target="_blank">Justin Roiland</a> e <a href="https://en.wikipedia.org/wiki/Dan_Harmon" target="_blank">Dan
+        Harmon</a> e mostra as aventuras insólitas do
+      cientista beberrão Rick Sanchez e seu neto inseguro e com hormônios em ebulição Morty Smith, membros de uma
+      família tipica americana, composta também por Jerry, um pai ignorante; Beth, uma mãe sensata e Summer, a irmã mais
+      velha, típica adolescente alienada, que se
+      compadece do irmão quando passa a fazer parte das aventuras de seu avô.
+      Entre planetas, universos, realidades paralelas, problemas conjugais, e TV a cabo, Rick and Morty é uma série
+      sobre a nossa insignificância perante a tudo o que existe.
+    </p>
+
+  </section>
+  <div class="social-media">
+    <p class="seguir ">Siga a série</p>
+    <a href="https://www.facebook.com/RickandMorty/" target="_blank" class="redes"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/rickandmorty/?hl=en" target="_blank" class="redes"><i
+        class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCel52OboABOS8kqa4PW37FA" target="_blank" class="redes"><i
+        class="fa fa-youtube"></i></a>
+  </div>
+  <footer>
+    <p>© Desenvolvido por Aline Souza e Kelly Alves</p>
+  </footer>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
