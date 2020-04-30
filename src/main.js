@@ -1,25 +1,32 @@
-import { filterData, sortData } from './data.js';
-
+import {} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
-const status = document.getElementById("status");
-const statusVivo = document.getElementById("vivo");
-const statusMorto = document.getElementById("morto");
-const statusDesconhecido = document.getElementById("desconhecido");
-const genero = document.getElementById("genero");
-const generoFem = document.getElementById("feminino");
-const generoMas = document.getElementById("masculino");
-const generoSemGen = document.getElementById("sem-genero");
-const generoIndef = document.getElementById("indefinido");
-const especie = document.getElementById("especie");
-const especieHum = document.getElementById("humano");
-const especieHumanoide = document.getElementById("humanoide");
-const especieAlien = document.getElementById("Alien");
-const especieAnimal = document.getElementById("animal");
-const temporada = document.getElementById("temporada");
-const temporadaUm = document.getElementById("temp-um");
-const temporadaDois = document.getElementById("temp-dois");
-const temporadaTres = document.getElementById("temp-tres");
-const temporadaQuatro = document.getElementById("temp-quatro");
-const botaoBusca = document.getElementById("busca");
+export const elements = {
+  status: document.getElementById("status"),
+  statusVivo: document.getElementById("vivo"),
+  statusMorto: document.getElementById("morto"),
+  statusDesconhecido: document.getElementById("desconhecido"),
+  genero: document.getElementById("genero"),
+  generoFem: document.getElementById("feminino"),
+  generoMas: document.getElementById("masculino"),
+  generoSemGen: document.getElementById("sem-genero"),
+  generoIndef: document.getElementById("indefinido"),
+  especie: document.getElementById("especie"),
+  especieHum: document.getElementById("humano"),
+  especieHumanoide: document.getElementById("humanoide"),
+  especieAlien: document.getElementById("Alien"),
+  especieAnimal: document.getElementById("animal"),
+  temporadas: document.getElementById("temporadas"),
+  temporadaUm: document.getElementById("temp-um"),
+  temporadaDois: document.getElementById("temp-dois"),
+  temporadaTres: document.getElementById("temp-tres"),
+  temporadaQuatro: document.getElementById("temp-quatro"),
+  botaoBusca: document.getElementById("busca"),
+}
 
+const characters = data.results.map((item) => `<div>
+<img src="${item.image}" alt="${item.name}">
+<div> ${item.name}</div>
+`)
+
+document.getElementById('root').innerHTML = characters.join("");

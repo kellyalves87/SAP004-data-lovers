@@ -1,13 +1,13 @@
-export const filterData = (data, type, condition) => {
-  if (type === "type") {
-    return data.filter((item) => item[type].find(e => e === condition));
-  }
-  else {
-    return data.filter((item) => item[type] === condition);
-  }
-};
+import data from './data/rickandmorty/rickandmorty.js';
 
-export const sortData = (data, sortBy) => {
-  
+export const filtros = {
+  ordenarNomes: () => {
+    const personagens = data.results.map(function(item){
+      return [item.name, item.image]
+
+    })
+    const ordenando = personagens.sort()
+    return (personagens.sort())
+  }
 }
 
