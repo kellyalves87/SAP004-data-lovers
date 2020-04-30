@@ -24,9 +24,4 @@ export const elements = {
   botaoBusca: document.getElementById("busca"),
 }
 
-const characters = data.results.map((item) => `<div>
-<img src="${item.image}" alt="${item.name}">
-<div> ${item.name}</div>
-`)
 
-document.getElementById('root').innerHTML = characters.join("");
