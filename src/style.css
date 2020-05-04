@@ -1,9 +1,9 @@
-body{
+/*body{
     background-image: url('rick&morty.jpeg');
     background-repeat: no-repeat fixed;
     background-size: cover;
-    overflow-x: hidden; /*tira a barra horizontal de rolagem*/
-}
+    overflow-x: hidden; tira a barra horizontal de rolagem
+}*/
 
 .navbar {
     top: 100%;
@@ -108,7 +108,7 @@ footer{
     width: 35px;
 }
 .social-media .redes {
-    background: white;
+    background: black;
     color: #02b1c8;
 }
 .seguir{
@@ -117,4 +117,3 @@ footer{
     padding-left: 5mm;
 }
  
-
