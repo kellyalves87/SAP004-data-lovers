@@ -1,27 +1,14 @@
-import {} from './data.js';
-import data from './data/rickandmorty/rickandmorty.js';
+import data from "./data/rickandmorty/rickandmorty.js";
+import {filterData, sortData} from './data.js';
 
-export const elements = {
-  status: document.getElementById("status"),
-  statusVivo: document.getElementById("vivo"),
-  statusMorto: document.getElementById("morto"),
-  statusDesconhecido: document.getElementById("desconhecido"),
-  genero: document.getElementById("genero"),
-  generoFem: document.getElementById("feminino"),
-  generoMas: document.getElementById("masculino"),
-  generoSemGen: document.getElementById("sem-genero"),
-  generoIndef: document.getElementById("indefinido"),
-  especie: document.getElementById("especie"),
-  especieHum: document.getElementById("humano"),
-  especieHumanoide: document.getElementById("humanoide"),
-  especieAlien: document.getElementById("Alien"),
-  especieAnimal: document.getElementById("animal"),
-  temporadas: document.getElementById("temporadas"),
-  temporadaUm: document.getElementById("temp-um"),
-  temporadaDois: document.getElementById("temp-dois"),
-  temporadaTres: document.getElementById("temp-tres"),
-  temporadaQuatro: document.getElementById("temp-quatro"),
-  botaoBusca: document.getElementById("busca"),
+document.getElementById("root").innerHTML = generateCard(data.results);
+
+function generateCard(list) {
+  return list.map((item) => 
+  `<img src="${item.image}">
+    <h3>Nome: ${item.name}</h3>
+    <h3>Status: ${item.status}</h3>
+    <h3>Gênero: ${item.gender}</h3>
+    <h3>Origem: ${item.origin.name}</h3>
+    <h3>Localização:${item.location.name}</h3>`)
 }
-
-
