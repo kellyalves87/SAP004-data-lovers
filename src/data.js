@@ -30,5 +30,7 @@ export function originCharacters (data, name, value) {
 
 export function locationCharacters (data, name, value) {
     return data.filterData(data, name, value);
-}
+};
 
+
+  
