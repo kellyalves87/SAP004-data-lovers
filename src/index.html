@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Rick and Morty</title>
   <link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
   <link rel="stylesheet" href="style.css">
@@ -9,21 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
   <body>
-<<<<<<< HEAD
-    <header>
-      <img src="logo-rick-and-morty.png" alt="rickandmorty" width=250 height=150>
-    </header>
-=======
-    <!--<header>
-    <h1>Rick and Morty</h1>
-  </header>-->
->>>>>>> 59f6197... menu,redes sociais e resumo sobre a série.HTML e CSS
+   <section>
+      <img src="logo-rick-and-morty.png" alt="rickandmorty" class="logo" width=250 height=150>
+   </section>
   <nav class="navbar">
       <div class="menu">
-        <button class="botao-menu">Status
-          <i class="fa fa-caret-down"></i> <!--seta pra baixo-->
+        <button class="botao-menu" id="status">Status
+          <i class="fa fa-caret-down"></i> seta pra baixo
         </button>
-        <div class="menu-lista">
+        <div id="status" class="menu-lista">
           <a href="#">Vivo</a>
           <a href="#">Morto</a>
           <a href="#">Desconhecido</a>
@@ -48,8 +43,8 @@
       <a href="#">Humanoide</a>
       <a href="#">Alien</a>
       <a href="#">Animal</a>
+      desconhecido
     </div>
-<<<<<<< HEAD
   </div>
   <div class="menu">
     <button class="botao-menu">Temporadas
@@ -62,20 +57,6 @@
       <a href="#">Temp 4</a>
     </div>
   </div>
-=======
-  </div>
-  <div class="menu">
-    <button class="botao-menu">Temporadas
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="menu-lista">
-      <a href="#">Temp 1</a>
-      <a href="#">Temp 2</a>
-      <a href="#">Temp 3</a>
-      <a href="#">Temp 4</a>
-    </div>
-  </div>
->>>>>>> 59f6197... menu,redes sociais e resumo sobre a série.HTML e CSS
   <label class="barra-de-pesquisa">
     <input type="text" class="pesquisa" placeholder="Pesquisar por nome...">
     <button class="enter"><img src="search-icon.png"></button>
@@ -87,11 +68,10 @@
       compadece do irmão quando passa a fazer parte das aventuras de seu avô. 
       Entre planetas, universos, realidades paralelas, problemas conjugais, e TV a cabo, Rick and Morty é uma série sobre a nossa insignificância perante a tudo o que existe.
     </p>
-<<<<<<< HEAD
-
-=======
->>>>>>> 59f6197... menu,redes sociais e resumo sobre a série.HTML e CSS
   </section>
+  <main>
+    <div id="cards" class="charac"></div>
+  </main>
   <div class="social-media">
     <p class="seguir ">Siga a série</p>
     <a href="https://www.facebook.com/RickandMorty/" target="_blank" class="redes"><i class="fa fa-facebook"></i></a>
@@ -103,5 +83,84 @@
   </footer>
   <script src="main.js" type="module"></script>
     </body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rick and Morty</title>
+	<link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+  <body>
+	<header>
+    <p class="porcentagem" id="porcentagem"></p>
+		<!--<img src="logo-rick-and-morty.png" alt="rickandmorty" width=250 height=150>-->
+  </header>
+  <!--<nav class="navbar">-->
+    <div class="menu">
+      <select name="selec-status" id="selec-status" class='select'>
+        <!--<option value="Status" selected disabled>Status</option>
+        <option value="vivo">Vivo</option>
+        <option value="morto">Morto </option>
+        <option value="desconhecido">Desconhecido</option>-->
+      </select>  
+      <select name="Genero" id="selec-genero" class='select'>
+        <!--<option value="genero" selected disabled>Gênero</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="indefinido">Indefinido</option>-->
+      </select>
+      <select name="Especie" id="selec-especie" class='select'>
+        <!--<option value="especie" selected disabled>Espécie</option>
+        <option value="humano">Humano</option>
+        <option value="humanoide">Humanoide</option>
+        <option value="alien">Alien</option>
+        <option value="animal">Animal</option>-->
+      </select>
+      <!--<select id="selec-origem" class='select'>
+        <option value="origem" selected disabled>Origem</option>
+      </select>
+      <select id="selec-local" class='select'>
+        <option value= "local" selected disabled>Localização</option>
+      </select>-->
+      <select name="Ordem" id="selec-order" class='select'>
+        <option value="ordem" selected disabled>Ordem</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
+      </select>
+    </div>
+    <label class="barra-de-pesquisa">
+      <input type="text" class="pesquisa" id="buscar" placeholder="Pesquisar por nome...">
+      <!--<button id="busca" class="enter"><img src="search-icon.png"></button>-->
+    </label>
+  <!--</nav>-->
+  <section class="resumo">
+    <p>A série Rick and Morty foi criada em 2013 por <a href="https://pt.wikipedia.org/wiki/Justin_Roiland"
+      target="_blank">Justin Roiland</a> e <a href="https://en.wikipedia.org/wiki/Dan_Harmon" target="_blank">Dan
+      Harmon</a> e mostra as aventuras insólitas do
+      cientista beberrão Rick Sanchez e seu neto inseguro e com hormônios em ebulição Morty Smith, membros de uma
+      família tipica americana, composta também por Jerry, um pai ignorante; Beth, uma mãe sensata e Summer, a irmã mais
+      velha, típica adolescente alienada, que se
+      compadece do irmão quando passa a fazer parte das aventuras de seu avô.
+      Entre planetas, universos, realidades paralelas, problemas conjugais, e TV a cabo, Rick and Morty é uma série
+      sobre a nossa insignificância perante a tudo o que existe.
+    </p>
+  </section> 
+  <main>
+    <div id="root"></div>
+  </main>
+  <div class="social-media">
+    <p class="seguir ">Siga a série</p>
+    <a href="https://www.facebook.com/RickandMorty/" target="_blank" class="redes"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.instagram.com/rickandmorty/?hl=en" target="_blank" class="redes"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCel52OboABOS8kqa4PW37FA" target="_blank" class="redes"><i class="fa fa-youtube"></i></a>
+  </div>
+  <footer>
+    <p>© Desenvolvido por Aline Souza e Kelly Alves</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+  </body>
 </html>
- 
