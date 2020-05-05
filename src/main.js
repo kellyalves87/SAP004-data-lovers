@@ -1,83 +1,50 @@
-//simport {app} from './data/rickandmorty.js';
-import data from './data/rickandmorty/rickandmorty.js';
+import data from "./data/rickandmorty/rickandmorty.js";
+import { filterData, sortData } from "./data.js";
 
-/*document.getElementById('root').innerHTML = data.results.map((personagem) => 
-    `<img src="${personagem.image}" id="card">
-    <h3 id="container">Nome: ${personagem.name}</h3>
-    <h3 id="container">Status: ${personagem.status}</h3>
-    <h3 id="container">Gênero: ${personagem.gender}</h3>
-    <h3 id="container">Origem: ${personagem.origin.name}</h3>
-    <h3 id="container">Localização: ${personagem.location.name}</h3>`).join("")*/
 
-    const arquivo = data.results
-    const generoFiltro = document.getElementById("selec-genero")
-    const statusFiltro = document.getElementById("selec-status")
-    const estastistica = document.getElementById("porcentagem");
+function generateCard(list) {
+  return list.map(
+    (item) =>
+      `<img src="${item.image}">
+    <h3>Nome: ${item.name}</h3>
+    <h3>Status: ${item.status}</h3>
+    <h3>Gênero: ${item.gender}</h3>
+    <h3>Origem: ${item.origin.name}</h3>
+    <h3>Localização:${item.location.name}</h3>`
+  );
+}
 
-    generoFiltro.addEventListener("change", () => {
-        genero() 
-        estastistica.innerHTML=`aqui os pers. ${app.calcular(app.filtroG(arquivo,generoFiltro.value))} % ${generoFiltro.value}`
-    })
+function dropDown(list){
+  return list.map(
+    (item) => 
+    ` <option value="${item.origin.name}">${item.origin.name}</option>
+    `
+  );
+}
 
-    function genero(){
-        return mostrarCartoes(app.generoFiltro(arquivo,generoFiltro.value))
-    }
-   window.onload=()=>{
-    menuGenero(arquivo)
-    mostrarCartoes(arquivo)
-    menuStatus(arquivo)
-   }
+const dropDownOrigin = document.getElementById("origin");
+dropDownOrigin.innerHTML=dropDown(data.results);
 
-   function menuGenero(arquivo){
-       const personagemGenero=[]
-       arquivo.map(item => { 
-        if (!personagemGenero.includes(item.gender)){ //includes determina se um array contém um determinado elemento, retornando true ou false.
-            personagemGenero.push(item.gender)
-        } else {
-            return false
-        }
-       })
-       generoFiltro.innerHTML=""
-       generoFiltro.innerHTML="<option value =\"none\">Gênero</option>"
-       generoFiltro.innerHTML+=personagemGenero.map(item =>
-        `<option value="${item}">${item}</option>`).join("")
-       }
-       function mostrarCartoes(arr) {
-        const cartoes = document.getElementById("root");
-        let layout = "";
-        arr.forEach(arquivo => {
-          layout += `
-              <div class ="card">
-                <img src="${arquivo.image}"/>
-                <h3> Nome:  ${arquivo.name}</h3>
-                <h3> Gênero: ${arquivo.gender}</h3>
-                <h3> Status: ${arquivo.status}</h3>
-                <h3> Localização: ${arquivo.location.name}</h3>
-                <h3> Origem: ${arquivo.origin.name}</h3>
-              </div> `
-        })
-        cartoes.innerHTML = layout
-      }
-      
-      statusFiltro.addEventListener("change", () => {
-          status()
-          estastistica.innerHTML=`porcentagem ${app.calcular(app.filtroS(arquivo,statusFiltro.value))} % ${statusFiltro.value} pers`
-      })
-      function status(){
-         mostrarCartoes(app.filtroS(arquivo,statusFiltro.value))
-      }
-      function menuStatus(arquivo){
-          const personagemStatus = []
-          arquivo.map(item => {
-              if (!personagemStatus.includes(item.status)){
-                  personagemStatus.push(item.status)
-              } else {
-                  return false
-              }
-          })
-          statusFiltro.innerHTML = "";
-          statusFiltro.innerHTML = "<option value =\"none\">Status</option>";
-          statusFiltro.innerHTML += personagemStatus.map(item =>
-            `<option value="${item}">${item}</option>`).join("");
-        }
-        
+const status = document.getElementById("status");
+status.addEventListener("change", function(){
+  document.getElementById("root").innerHTML= generateCard(filterData(data.results, "status", status.value))
+});
+
+const gender = document.getElementById("gender");
+gender.addEventListener("change", function(){
+  document.getElementById("root").innerHTML=generateCard(filterData(data.results, "gender", gender.value))
+});
+
+const species = document.getElementById("species");
+species.addEventListener("change", function(){
+  document.getElementById("root").innerHTML=generateCard(filterData(data.results, "species", species.value))
+});
+
+const location = document.getElementById("location");
+location.addEventListener("change", function(){
+  document.getElementById("root").innerHTML=generateCard(filterData(data.results, "location", location.value))
+});
+
+
+const searchButton = document.getElementById("search-name").value;
+searchButton.addEventListener("click");
