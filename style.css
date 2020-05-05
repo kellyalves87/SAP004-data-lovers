@@ -60,18 +60,18 @@
     background-color: white;
     padding: 5px;
 }
-.pesquisa{
+.search-button{
     color: black;
     border: none;
     border-bottom: 1.5px solid black;
     width: 200px;
     outline: none;
 }
-.pesquisa::placeholder {
+.search-name::placeholder {
     color: grey;
     font-size: 15px;
 }
-.resumo{
+.abstract{
     text-align: left;
     font-family: 'Oswald', sans-serif;
     font-size: 13pt;
@@ -88,20 +88,20 @@
 footer{
     font-family: 'Oswald', sans-serif;
     font-size: 13pt;
-    color: white;
+    color: black;
 }
 .social-media{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
-    color: white;
+    color: black;
     position: relative;
     left: 40%;
 }
-.redes{
-    border: 2px solid rgb(119, 131, 106);
+.media{
+    border: 2px solid rgb(7, 12, 56);
     border-radius: 50%;
     display: inline-block;
-    fill: rgb(119, 131, 106);
+    fill: rgb(5, 8, 2);
     height: 35px; 
     line-height: 32px;
     text-align: center;
@@ -109,7 +109,7 @@ footer{
 }
 .social-media .redes {
     background: black;
-    color: #02b1c8;
+    color: #2602c8;
 }
 .seguir{
     font-size: 25px;

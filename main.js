@@ -14,6 +14,17 @@ function generateCard(list) {
   );
 }
 
+function dropDown(list){
+  return list.map(
+    (item) => 
+    ` <option value="${item.origin.name}">${item.origin.name}</option>
+    `
+  );
+}
+
+const dropDownOrigin = document.getElementById("origin");
+dropDownOrigin.innerHTML=dropDown(data.results);
+
 const status = document.getElementById("status");
 status.addEventListener("change", function(){
   document.getElementById("root").innerHTML= generateCard(filterData(data.results, "status", status.value))
@@ -29,12 +40,11 @@ species.addEventListener("change", function(){
   document.getElementById("root").innerHTML=generateCard(filterData(data.results, "species", species.value))
 });
 
-const origin = document.getElementById("origin");
-origin.addEventListener("change", function(){
-  document.getElementById("root").innerHTML=generateCard(filterData(data.results, "origin", origin.value))
-});
-
 const location = document.getElementById("location");
 location.addEventListener("change", function(){
   document.getElementById("root").innerHTML=generateCard(filterData(data.results, "location", location.value))
 });
+
+
+const searchButton = document.getElementById("search-name").value;
+searchButton.addEventListener("click");
