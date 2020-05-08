@@ -1,24 +1,22 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rick and Morty</title>
-    <link rel="shortcut-icon" type="image-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
   </head>
   <body>
-    <!--<header>
-		<img src="logo-rick-and-morty.png" alt="rickandmorty" width=250 height=150>
-  </header>-->
+    <header>
+      <p id="porcentagem"></p>
+    </header>
     <nav class="navbar">
       <div class="menu">
         <select id="status" class="select">
-          <option value="selec-status" selected disabled>Status</option>
+          <option value="status"selected disabled>Status</option>
           <option value="Alive">Vivo</option>
           <option value="Dead">Morto</option>
           <option value="unknown">Desconhecido</option>
@@ -43,56 +41,43 @@
           <option value="Robot">Robô</option>
           <option value="unknown">Desconhecido</option>
           <option value="Vampire">Vampiro</option>
-
         </select>
-        <select id="origin" class="select">
+        <!--<select id="origin" class="select">
           <option value="origin-menu" selected disabled>Origem</option>
         </select>
         <select id="location" class="select">
           <option value="local-menu" selected disabled>Localização</option>
+        </select>-->
+        <select id="sort" class="select">
+          <option value="ordem" selected disabled>Ordenar</option>
+          <option id="az" value="a-z">A-Z</option>
+          <option id="za"value="z-a">Z-A</option>
         </select>
-        <select id="sort-asc" class="select">
-          <option value="a-z" selected disabled>A-Z</option>
-        </select>
-        <select id="sort-desc" class="select">
+        <select id="responsivo" href="#">&#9776;</select>
+        <!--<select id="sort-desc" class="select">
           <option value="z-a" selected disabled>Z-A</option>
-        </select>
+        </select>--->
       </div>
       <label class="search-bar">
-        <input
-          type="text"
-          class="search"
-          id="search-name"
-          placeholder="Pesquisar por nome..."
-        />
+        <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome...">
         <button id="search-button" class="enter"><img src="search-icon.png" /></button>
       </label>
     </nav>
     <section class="abstract">
-      <p>
-        A série Rick and Morty foi criada em 2013 por
-        <a href="https://pt.wikipedia.org/wiki/Justin_Roiland" target="_blank"
-          >Justin Roiland</a
-        >
-        e
-        <a href="https://en.wikipedia.org/wiki/Dan_Harmon" target="_blank"
-          >Dan Harmon</a
-        >
-        e mostra as aventuras insólitas do cientista beberrão Rick Sanchez e seu
-        neto inseguro e com hormônios em ebulição Morty Smith, membros de uma
-        família tipica americana, composta também por Jerry, um pai ignorante;
-        Beth, uma mãe sensata e Summer, a irmã mais velha, típica adolescente
-        alienada, que se compadece do irmão quando passa a fazer parte das
-        aventuras de seu avô. Entre planetas, universos, realidades paralelas,
-        problemas conjugais, e TV a cabo, Rick and Morty é uma série sobre a
-        nossa insignificância perante a tudo o que existe.
-      </p>
+      <article>A série Rick and Morty foi criada em 2013 por <a href="https://pt.wikipedia.org/wiki/Justin_Roiland" target="_blank">Justin Roiland</a>e
+        <a href="https://en.wikipedia.org/wiki/Dan_Harmon" target="_blank">Dan Harmon</a>e mostra as aventuras insólitas do cientista beberrão
+        Rick Sanchez e seu neto inseguro e com hormônios em ebulição Morty Smith, membros de uma família tipica americana, composta também por 
+        Jerry, um pai ignorante; Beth, uma mãe sensata e Summer, a irmã mais velha, típica adolescente alienada, que se compadece do irmão 
+        quando passa a fazer parte das aventuras de seu avô. Entre planetas, universos, realidades paralelas, problemas conjugais, e TV a cabo, 
+        Rick and Morty é uma série sobre a nossa insignificância perante a tudo o que existe.
+      </article>
     </section>
     <main>
       <div id="root"></div>
     </main>
     <div class="social-media">
-      <p class="follow">Siga a série</p><a href="https://www.facebook.com/RickandMorty/" target="_blank" class="media"><i class="fa fa-facebook"></i></a>
+      <p class="follow">Siga a série</p>
+      <a href="https://www.facebook.com/RickandMorty/" target="_blank" class="media"><i class="fa fa-facebook"></i></a>
       <a href="https://www.instagram.com/rickandmorty/?hl=en" target="_blank" class="media"><i class="fa fa-instagram"></i></a>
       <a href="https://www.youtube.com/channel/UCel52OboABOS8kqa4PW37FA" target="_blank" class="media"><i class="fa fa-youtube"></i></a>
     </div>

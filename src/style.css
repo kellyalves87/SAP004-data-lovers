@@ -1,119 +1,167 @@
-/*body{
-    background-image: url('rick&morty.jpeg');
-    background-repeat: no-repeat fixed;
-    background-size: cover;
-    overflow-x: hidden; tira a barra horizontal de rolagem
-}*/
+body {
+  /*background-image: url('rick&morty.jpeg');
+  background-repeat: no-repeat fixed;
+  background-size: cover;
+  overflow-x: hidden;tira a barra horizontal de rolagem
+  margin: 0;*/
+  overflow-x: hidden;/*tira a barra horizontal de rolagem*/
+  background-color: rgb(93, 119, 119);
+}
 
 .navbar {
-    top: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 13pt;
+  top: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 13pt;
 }
+
 .menu {
-    float: left;
-    overflow: hidden;
+  float: left;
+  overflow: hidden;
 }
-.menu .botao-menu {
-    font-size: 18px; 
-    border: none;
-    outline: none;
-    color: black;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: 'Oswald', sans-serif;
+
+.select {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
 }
-.menu-lista {
-    display: none;
-    position: absolute;
-    background-color: white;
-    width: 160px;
-    box-shadow: 0px 5px 15px 0px black;
+
+.search-bar {
+  float: right;
+  margin: 10px 25px 10px;
 }
-.menu-lista a {
-    float: none;
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+
+.enter img {
+  width: 15px;
+  height: 15px;
 }
-.menu-lista a:hover {
-    background-color: rgba(145, 143, 143, 0.644);
+
+.enter {
+  border: none;
+  padding: 5px;
 }
-.menu:hover .menu-lista {
-    display: block;
+
+.search {
+  border: none;
+  border-bottom: 1.5px solid black;
+  width: 200px;
+  outline: none;
 }
-.barra-de-pesquisa {
-    float: right;
-    margin: 10px 25px 10px;
+
+.search::placeholder {
+  color: grey;
+  font-size: 15px;
 }
-.enter img{  
-    width: 15px;
-    height: 15px;
+
+.abstract {
+  font-size: 14pt;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 170px;
+  padding: 8px;
+  line-height: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
-.enter{
-    border: none;
-    background-color: white;
-    padding: 5px;
-}
-.search-button{
-    color: black;
-    border: none;
-    border-bottom: 1.5px solid black;
-    width: 200px;
-    outline: none;
-}
-.search-name::placeholder {
-    color: grey;
-    font-size: 15px;
-}
-.abstract{
-    text-align: left;
-    font-family: 'Oswald', sans-serif;
-    font-size: 13pt;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 170px;    
-    padding: 2px;
-    line-height: 10mm;
-    padding-left: 10mm;
-    padding-right: 10mm
-}
-.resumo a{
+
+.abstract a {
   color: inherit;
 }
-footer{
-    font-family: 'Oswald', sans-serif;
-    font-size: 13pt;
-    color: black;
+
+footer {
+  font-size: 13pt;
 }
-.social-media{
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    color: black;
+
+.social-media {
+  font-size: 20px;
+  position: relative;
+  left: 45%;
+}
+
+.social-media, .footer, .abstract, .select, .navbar {
+  font-family: 'Oswald', sans-serif;
+}
+
+.select, .footer, .search, .social-media {
+  color: black;
+}
+
+.navbar, .enter, .search {
+  background-color: transparent;
+}
+
+.media {
+  border: 2px solid rgb(20, 79, 94);
+  border-radius: 50%;
+  display: inline-block;
+  height: 35px;
+  line-height: 32px;
+  text-align: center;
+  width: 35px;
+}
+
+.fa {
+  color: rgb(106, 182, 207);
+}
+
+.follow {
+  font-size: 25px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.card-img {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-color: #365358;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+#responsivo{
+  padding-left: 5%;
+  padding-right: 5%;
+  color: aqua;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(100, 168, 91, 0.747);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a4d58;
+}
+
+@media screen and (max-width:800px) {
+  .select {
+    padding: 2px 1px;
     position: relative;
-    left: 40%;
+  }
+  .search {
+    width: 150px;
+    top: 50px;
+    left: 90px;
+  }
+  .abstract {
+    margin: 20px;
+    padding: 20px;
+  }
+  .navbar {
+    display: flex;
+    height: 60px;
+  }
+  .navbar, .search, .enter {
+    background-color: transparent;
+  }
+  .enter {
+    display: inline;
+  }
 }
-.media{
-    border: 2px solid rgb(7, 12, 56);
-    border-radius: 50%;
-    display: inline-block;
-    fill: rgb(5, 8, 2);
-    height: 35px; 
-    line-height: 32px;
-    text-align: center;
-    width: 35px;
-}
-.social-media .redes {
-    background: black;
-    color: #2602c8;
-}
-.seguir{
-    font-size: 25px;
-    text-align: left;
-    padding-left: 5mm;
-}
- 

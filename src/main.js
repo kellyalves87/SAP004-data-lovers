@@ -1,20 +1,20 @@
 import data from "./data/rickandmorty/rickandmorty.js";
-import { filterData, sortData } from "./data.js";
-
+import {filterData}  from "./data.js";
 
 function generateCard(list) {
   return list.map(
     (item) =>
-      `<img src="${item.image}">
-    <h3>Nome: ${item.name}</h3>
+    `<img class="card-img" src="${item.image}">
+    <h3>${item.name}</h3>
     <h3>Status: ${item.status}</h3>
     <h3>Gênero: ${item.gender}</h3>
+    <h3>Espécie: ${item.species}</h3>
     <h3>Origem: ${item.origin.name}</h3>
-    <h3>Localização:${item.location.name}</h3>`
-  );
+    <h3>Localização: ${item.location.name}</h3>`
+  ).join("");
 }
 
-function dropDown(list){
+/*function dropDown(list){
   return list.map(
     (item) => 
     ` <option value="${item.origin.name}">${item.origin.name}</option>
@@ -22,8 +22,13 @@ function dropDown(list){
   );
 }
 
+const origin = document.getElementById("origin")
+origin.addEventListener("change", function (){
+  document.getElementById("root").innerHTML=generateCard(filterData(data.results,"origin", origin.value))
+})
+
 const dropDownOrigin = document.getElementById("origin");
-dropDownOrigin.innerHTML=dropDown(data.results);
+dropDownOrigin.innerHTML=dropDown(data.results);*/
 
 const status = document.getElementById("status");
 status.addEventListener("change", function(){
@@ -45,6 +50,13 @@ location.addEventListener("change", function(){
   document.getElementById("root").innerHTML=generateCard(filterData(data.results, "location", location.value))
 });
 
+/*const searchButton = document.getElementById("search-name").value;
+searchButtton.addEventListener("click");*/
 
-const searchButton = document.getElementById("search-name").value;
-searchButton.addEventListener("click");
+const name = `${item.name}`
+const search= document.getElementById("search-name")
+
+name.addEventListener("change",generateCard)
+search.addEventListener("search-name", (e)=>{
+  if(e.target.value ==="") return generateCard
+})
