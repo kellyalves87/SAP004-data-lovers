@@ -105,11 +105,11 @@ location.addEventListener("change", function () {
 
 const sort = document.getElementById("sort");
 sort.addEventListener("change", function () {
+  const selectedIndex = sort.selectedIndex;
   document.getElementById("root").innerHTML = sortData(
     data.results,
-    "sort",
     "name",
-    sort.value
+    sort[selectedIndex].value
   )
     .map((item, index) => generateCard(item, index))
     .join("");
@@ -119,9 +119,7 @@ const searchText = document.getElementById("search-name");
 searchText.addEventListener("keypress", function () {
   document.getElementById("root").innerHTML = searchName(
     data.results,
-    "search-name",
-    "name",
-    searchText.value
+    "name"
   )
     .map((item, index) => generateCard(item, index))
     .join("");
