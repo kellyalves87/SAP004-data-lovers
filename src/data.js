@@ -13,7 +13,7 @@ export function filterDataOptions(data, key, attr, value) {
 }
 
 export function sortData(data, name) {
-  if (name === "a-z") {
+  if (name === "A-Z") {
     return data.sort((a, b) => (a.name > b.name ? 1 : -1));
   }
   return data.sort((a, b) => (a, name > b.name ? -1 : 1));
