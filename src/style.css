@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;tira a barra horizontal de rolagem
   margin: 0;*/
   overflow-x: hidden;/*tira a barra horizontal de rolagem*/
-  background-color: rgb(93, 119, 119);
+  background-color: rgb(33, 65, 33);
 }
 
 .navbar {
@@ -15,17 +15,17 @@ body {
   font-size: 13pt;
 }
 
-.menu {
+/*.menu {
   float: left;
   overflow: hidden;
-}
+}*/
 
 .select {
   font-size: 18px;
   border: none;
-  outline: none;
+  /*outline: none;*/
   padding: 14px 16px;
-  background-color: inherit;
+  background-color:rgb(201, 236, 129);
 }
 
 .search-bar {
@@ -33,25 +33,15 @@ body {
   margin: 10px 25px 10px;
 }
 
-.enter img {
-  width: 15px;
-  height: 15px;
-}
-
-.enter {
-  border: none;
-  padding: 5px;
-}
-
 .search {
   border: none;
-  border-bottom: 1.5px solid black;
+  border-bottom: 1.5px solid rgb(201, 236, 129);
   width: 200px;
   outline: none;
 }
 
 .search::placeholder {
-  color: grey;
+  color: rgb(187, 178, 178);
   font-size: 15px;
 }
 
@@ -66,21 +56,19 @@ body {
   padding-right: 35px;
 }
 
-.abstract a {
-  color: inherit;
-}
-
 footer {
   font-size: 13pt;
 }
 
 .social-media {
   font-size: 20px;
-  position: relative;
-  left: 45%;
+  
+  
+  /*border: 1px solid rgb(201, 236, 129);
+  padding: 2px;*/
 }
 
-.social-media, .footer, .abstract, .select, .navbar {
+.social-media, .footer, .abstract, .select, .navbar, .btn, .dev, .search::placeholder {
   font-family: 'Oswald', sans-serif;
 }
 
@@ -91,19 +79,19 @@ footer {
 .navbar, .enter, .search {
   background-color: transparent;
 }
+.btn, .abstract a{
+color: inherit;
+}
 
 .media {
-  border: 2px solid rgb(20, 79, 94);
-  border-radius: 50%;
+  border: 2px solid transparent;
   display: inline-block;
-  height: 35px;
-  line-height: 32px;
-  text-align: center;
   width: 35px;
 }
 
 .fa {
-  color: rgb(106, 182, 207);
+  color: rgb(201, 236, 129);
+  size: 10px;
 }
 
 .follow {
@@ -112,24 +100,31 @@ footer {
   padding-left: 5px;
 }
 
-.card-img {
+  img {
   display: inline-block;
   width: 250px;
   height: 250px;
-  background-color: #365358;
+  background-color: rgb(42, 213, 219);
   margin: 10px;
   padding: 10px;
   overflow: hidden;
   border-radius: 20px;
 }
-#responsivo{
-  padding-left: 5%;
-  padding-right: 5%;
-  color: aqua;
+.btn{
+  width:35px;
+  font-size: 20px;
+}
+#btn-next{
+  position: absolute;
+  right: 15%;
+}
+#btn-prev{
+  position: absolute;
+  left: 15%;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(100, 168, 91, 0.747);
+  background-color: black;
 }
 
 ::-webkit-scrollbar {
@@ -137,7 +132,7 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3a4d58;
+  background: rgb(189, 186, 186);
 }
 
 @media screen and (max-width:800px) {
@@ -160,8 +155,5 @@ footer {
   }
   .navbar, .search, .enter {
     background-color: transparent;
-  }
-  .enter {
-    display: inline;
   }
 }

@@ -9,26 +9,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
   </head>
-
   <body>
     <nav class="navbar">
-      <div class="menu">
+      <!--<div class="menu">-->
         <select id="status" class="select">
-          <option value="none">Status</option>
+          <option value="none" selected disabled>Status</option>
           <option value="Alive">Vivo</option>
           <option value="Dead">Morto</option>
           <option value="unknown">Desconhecido</option>
         </select>
 
         <select id="gender" class="select">
-          <option value="none">Gênero</option>
+          <option value="none" selected disabled>Gênero</option>
           <option value="Female">Feminino</option>
           <option value="Male">Masculino</option>
           <option value="unknown">Indefinido</option>
         </select>
 
         <select id="species" class="select">
-          <option value="none">Espécie</option>
+          <option value="none" selected disabled>Espécie</option>
           <option value="Alien">Alien</option>
           <option value="Animal">Animal</option>
           <option value="Cronenberg">Cronenberg</option>
@@ -48,11 +47,10 @@
         <select id="location" class="select"> </select>
 
         <select id="sort" class="select">
-          <option value="none">Ordem alfabética</option>
+          <option value="none" selected disabled>Ordem alfabética</option>
           <option value="A-Z">A-Z</option>
           <option value="Z-A">Z-A</option>
         </select>
-      </div>
       <label class="search-bar">
         <input
           type="text"
@@ -64,7 +62,7 @@
     </nav>
     <section class="abstract">
       <p>
-        A série Rick and Morty foi criada em 2013 por<a
+        A série Rick and Morty foi criada em 2013 por <a
           href="https://pt.wikipedia.org/wiki/Justin_Roiland"
           target="_blank"
           >Justin Roiland</a
@@ -85,12 +83,12 @@
     </section>
     <main>
       <div id="root"></div>
-      <a href="#" id="btn-prev">Prev</a>
-      <a href="#" id="btn-next">Next</a>
-        page: <span id="page"></span>
+      <a href="#" class="btn" id="btn-prev">Prev</a>
+      <a href="#" class="btn" id="btn-next">Next</a>
+        <!--<span class="btn" id="page">page:</span>-->
     </main>
     <div class="social-media">
-      <p class="follow">Siga a série</p>
+      <!--<p class="follow">Siga a série</p>-->
       <a
         href="https://www.facebook.com/RickandMorty/"
         target="_blank"
@@ -111,7 +109,7 @@
       ></a>
     </div>
     <footer>
-      <p>© Desenvolvido por Aline Souza e Kelly Alves</p>
+      <p class="dev">© Desenvolvido por Aline Souza e Kelly Alves</p>
     </footer>
 
     <script src="main.js" type="module"></script>
