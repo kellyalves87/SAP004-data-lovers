@@ -5,6 +5,11 @@ export function filterData(data, key, value) {
   return data.filter(filter);
 }
 
+
+export function calcular(data){
+  return(data.length * 100 / 493).toFixed()
+  }
+
 export function filterDataOptions(data, key, attr, value) {
   function filter(item) {
     return item[key][attr] === value;
@@ -17,6 +22,7 @@ export function sortData(data, name, optionValue) {
     return data.sort((a, b) => (a[name] > b[name] ? 1 : -1));
   }
   return data.sort((a, b) => (a[name] > b[name] ? -1 : 1));
+
 }
 
 export function statusCharacters(data, name, value) {
