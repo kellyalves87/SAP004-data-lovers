@@ -1,119 +1,159 @@
-/*body{
-    background-image: url('rick&morty.jpeg');
-    background-repeat: no-repeat fixed;
-    background-size: cover;
-    overflow-x: hidden; tira a barra horizontal de rolagem
-}*/
+body {
+  /*background-image: url('rick&morty.jpeg');
+  background-repeat: no-repeat fixed;
+  background-size: cover;
+  overflow-x: hidden;tira a barra horizontal de rolagem
+  margin: 0;*/
+  overflow-x: hidden;/*tira a barra horizontal de rolagem*/
+  background-color: rgb(33, 65, 33);
+}
 
 .navbar {
-    top: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 13pt;
+  top: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-size: 13pt;
 }
-.menu {
-    float: left;
-    overflow: hidden;
+
+/*.menu {
+  float: left;
+  overflow: hidden;
+}*/
+
+.select {
+  font-size: 18px;
+  border: none;
+  /*outline: none;*/
+  padding: 14px 16px;
+  background-color:rgb(201, 236, 129);
 }
-.menu .botao-menu {
-    font-size: 18px; 
-    border: none;
-    outline: none;
-    color: black;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: 'Oswald', sans-serif;
+
+.search-bar {
+  float: right;
+  margin: 10px 25px 10px;
 }
-.menu-lista {
-    display: none;
-    position: absolute;
-    background-color: white;
-    width: 160px;
-    box-shadow: 0px 5px 15px 0px black;
+
+.search {
+  border: none;
+  border-bottom: 1.5px solid rgb(201, 236, 129);
+  width: 200px;
+  outline: none;
 }
-.menu-lista a {
-    float: none;
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+
+.search::placeholder {
+  color: rgb(187, 178, 178);
+  font-size: 15px;
 }
-.menu-lista a:hover {
-    background-color: rgba(145, 143, 143, 0.644);
+
+.abstract {
+  font-size: 14pt;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 170px;
+  padding: 8px;
+  line-height: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
-.menu:hover .menu-lista {
-    display: block;
+
+footer {
+  font-size: 13pt;
 }
-.barra-de-pesquisa {
-    float: right;
-    margin: 10px 25px 10px;
+
+.social-media {
+  font-size: 20px;
+  
+  
+  /*border: 1px solid rgb(201, 236, 129);
+  padding: 2px;*/
 }
-.enter img{  
-    width: 15px;
-    height: 15px;
+
+.social-media, .footer, .abstract, .select, .navbar, .btn, .dev, .search::placeholder {
+  font-family: 'Oswald', sans-serif;
 }
-.enter{
-    border: none;
-    background-color: white;
-    padding: 5px;
+
+.select, .footer, .search, .social-media {
+  color: black;
 }
-.search-button{
-    color: black;
-    border: none;
-    border-bottom: 1.5px solid black;
-    width: 200px;
-    outline: none;
+
+.navbar, .enter, .search {
+  background-color: transparent;
 }
-.search-name::placeholder {
-    color: grey;
-    font-size: 15px;
+.btn, .abstract a{
+color: inherit;
 }
-.abstract{
-    text-align: left;
-    font-family: 'Oswald', sans-serif;
-    font-size: 13pt;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 170px;    
-    padding: 2px;
-    line-height: 10mm;
-    padding-left: 10mm;
-    padding-right: 10mm
+
+.media {
+  border: 2px solid transparent;
+  display: inline-block;
+  width: 35px;
 }
-.resumo a{
-  color: inherit;
+
+.fa {
+  color: rgb(201, 236, 129);
+  size: 10px;
 }
-footer{
-    font-family: 'Oswald', sans-serif;
-    font-size: 13pt;
-    color: black;
+
+.follow {
+  font-size: 25px;
+  text-align: left;
+  padding-left: 5px;
 }
-.social-media{
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    color: black;
+
+  img {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  background-color: rgb(42, 213, 219);
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.btn{
+  width:35px;
+  font-size: 20px;
+}
+#btn-next{
+  position: absolute;
+  right: 15%;
+}
+#btn-prev{
+  position: absolute;
+  left: 15%;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(189, 186, 186);
+}
+
+@media screen and (max-width:800px) {
+  .select {
+    padding: 2px 1px;
     position: relative;
-    left: 40%;
+  }
+  .search {
+    width: 150px;
+    top: 50px;
+    left: 90px;
+  }
+  .abstract {
+    margin: 20px;
+    padding: 20px;
+  }
+  .navbar {
+    display: flex;
+    height: 60px;
+  }
+  .navbar, .search, .enter {
+    background-color: transparent;
+  }
 }
-.media{
-    border: 2px solid rgb(7, 12, 56);
-    border-radius: 50%;
-    display: inline-block;
-    fill: rgb(5, 8, 2);
-    height: 35px; 
-    line-height: 32px;
-    text-align: center;
-    width: 35px;
-}
-.social-media .redes {
-    background: black;
-    color: #2602c8;
-}
-.seguir{
-    font-size: 25px;
-    text-align: left;
-    padding-left: 5mm;
-}
- 
