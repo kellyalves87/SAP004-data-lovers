@@ -19,26 +19,6 @@ export function sortData(data, name, optionValue) {
   return data.sort((a, b) => (a[name] > b[name] ? -1 : 1));
 }
 
-export function statusCharacters(data, name, value) {
-  return data.filterData(data, name, value);
-}
-
-export function genderCharacters(data, name, value) {
-  return data.filterData(data, name, value);
-}
-
-export function specieCharacters(data, name, value) {
-  return data.filterData(data, name, value);
-}
-
-export function originCharacters(data, name, value) {
-  return data.filterData(data, name, value);
-}
-
-export function locationCharacters(data, name, value) {
-  return data.filterData(data, name, value);
-}
-
 export function removeDuplicates(data, name) {
   return data.reduce((unique, elem) => {
     if (!unique.some((ob) => ob[name].name === elem[name].name)) {
@@ -48,8 +28,9 @@ export function removeDuplicates(data, name) {
   }, []);
 }
 
-export function searchName(data, name) {
+export function searchName(data, name, value) {
   return data.filter((item) =>
-    item.name.toUpperCase().includes(name.toUpperCase())
+    item[name].toUpperCase().includes(value.toUpperCase())
   );
 }
+
