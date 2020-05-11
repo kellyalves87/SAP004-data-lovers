@@ -4,9 +4,8 @@ export function filterData(data, key, value) { //função criada para filtrar os
   function filter(item) { //função filtro recebe um item
     return item[key] === value; //que retorna um item entre a chave que é igual o valor.
   }
-  return data.filter(filter); //retorna os dados do filtro que recebe um filtro.
+    return data.filter(filter); //retorna os dados do filtro que recebe um filtro.
 }
-
 
 export function calcular(data){ //função calcular os dados
   return(data.length * 100 / 493).toFixed() //retorna o tamanho dos dados vezes 100 divido por 493 convertendo um número em notação de ponto fixo (arredondando o resultado quando necessário) e retornar seu valor como uma sequência.
@@ -16,14 +15,14 @@ export function filterDataOptions(data, key, attr, value) { //função criada pa
   function filter(item) { //função filtro recebe um item
     return item[key][attr] === value; //que retorna um item entre a chave e um atributo que é igual ao valor.
   }
-  return data.filter(filter); //retorna os dados do filtro que recebe um filtro.
+    return data.filter(filter); //retorna os dados do filtro que recebe um filtro.
 }
 
 export function sortData(data, name, optionValue) { //função para classificar dados que recebe um dado, nome e a opção de valor.
   if (optionValue === "A-Z") { //se a opção de valor for igual "A-Z"
     return data.sort((a, b) => (a[name] > b[name] ? 1 : -1)); //retorna a classificação de dados que recebe a e b, gera uma arrow function que recebe o a entre nome e b entre nome
   }
-  return data.sort((a, b) => (a[name] > b[name] ? -1 : 1)); //retorna a classificação de dados que recebe a e b, gera uma arrow function que recebe o a entre nome e b entre nome 
+    return data.sort((a, b) => (a[name] > b[name] ? -1 : 1)); //retorna a classificação de dados que recebe a e b, gera uma arrow function que recebe o a entre nome e b entre nome 
 
 }
 
@@ -37,8 +36,7 @@ export function removeDuplicates(data, name) { //função para remover duplicado
 }
 
 export function searchName(data, name, value) { //função para a busca de nome.
-  return data.filter((item) => //retorna um dado filtrado que recebe um item.
+    return data.filter((item) => //retorna um dado filtrado que recebe um item.
     item[name].toUpperCase().includes(value.toUpperCase()) //o item nome sem letra maíuscula ou minúscula inclui o valor sem letra maíuscula ou minúscula.
   );
 }
-
