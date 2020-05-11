@@ -5,7 +5,17 @@ body {
   overflow-x: hidden;tira a barra horizontal de rolagem
   margin: 0;*/
   overflow-x: hidden;/*tira a barra horizontal de rolagem*/
-  background-color: rgb(33, 65, 33);
+  background-color: rgb( 3, 62, 71) ;
+}
+
+.home {
+  top: 100%;
+  font: 'Rock Salt', cursive;
+  font-size: 18px;
+  border: none;
+  padding: 14px 16px;
+  background-color:rgb(4, 173, 191);
+  cursor: pointer;
 }
 
 .navbar {
@@ -21,11 +31,12 @@ body {
 }*/
 
 .select {
-  font-size: 18px;
+  font-size: 14px;
   border: none;
   /*outline: none;*/
   padding: 14px 16px;
-  background-color:rgb(201, 236, 129);
+  background-color:rgb(4, 173, 191);
+  cursor: pointer;
 }
 
 .search-bar {
@@ -35,20 +46,21 @@ body {
 
 .search {
   border: none;
-  border-bottom: 1.5px solid rgb(201, 236, 129);
+  border-bottom: 1.5px solid rgb(4, 173, 191);
   width: 200px;
   outline: none;
+  cursor: pointer;
 }
 
 .search::placeholder {
   color: rgb(187, 178, 178);
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .abstract {
   font-size: 14pt;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(132, 147, 191);
   margin: 170px;
   padding: 8px;
   line-height: 35px;
@@ -58,10 +70,12 @@ body {
 
 footer {
   font-size: 13pt;
+  color: rgb(187, 178, 178);
 }
 
 .social-media {
   font-size: 20px;
+  cursor: pointer;
   
   
   /*border: 1px solid rgb(201, 236, 129);
@@ -69,10 +83,10 @@ footer {
 }
 
 .social-media, .footer, .abstract, .select, .navbar, .btn, .dev, .search::placeholder {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Rock Salt', cursive;
 }
 
-.select, .footer, .search, .social-media {
+.select,.search, .social-media {
   color: black;
 }
 
@@ -90,7 +104,7 @@ color: inherit;
 }
 
 .fa {
-  color: rgb(201, 236, 129);
+  color: rgb(4, 173, 191);
   size: 10px;
 }
 
@@ -104,7 +118,7 @@ color: inherit;
   display: inline-block;
   width: 250px;
   height: 250px;
-  background-color: rgb(42, 213, 219);
+  background-color: rgb(4, 173, 191);
   margin: 10px;
   padding: 10px;
   overflow: hidden;
@@ -113,6 +127,7 @@ color: inherit;
 .btn{
   width:35px;
   font-size: 20px;
+  color: rgb(187, 178, 178);
 }
 #btn-next{
   position: absolute;
@@ -124,7 +139,7 @@ color: inherit;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: black;
+  background-color: #033E47;
 }
 
 ::-webkit-scrollbar {
@@ -132,7 +147,7 @@ color: inherit;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(189, 186, 186);
+  background: rgb(4, 173, 191);
 }
 
 @media screen and (max-width:800px) {
