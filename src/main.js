@@ -10,12 +10,12 @@ import {
 function generateCard(item, index) {
   return `<div id="${index}">
       <img src="${item.image}">
-      <h3>Nome: ${item.name}</h3>
-      <h3>Status: ${item.status}</h3>
-      <h3>Specie: ${item.species}</h3>
-      <h3>Gênero: ${item.gender}</h3>
-      <h3>Origem: ${item.origin.name}</h3>
-      <h3>Localização:${item.location.name}</h3>
+    <h3>${item.name}</h3>
+    <p>Status: ${item.status}</p>
+    <p>Specie: ${item.species}</p>
+    <p>Gênero: ${item.gender}</p>
+    <p>Origem: ${item.origin.name}</p>
+    <p>Localização: ${item.location.name}</p> 
       </div>
     `;
 }
@@ -136,7 +136,7 @@ prevPagination.addEventListener("click", function () {
 });
 
 let currentPage = 1;
-let recordsPerPage = 10;
+let recordsPerPage = 14;
 
 function prevPage() {
   if (currentPage > 1) {
@@ -169,13 +169,13 @@ function changePage(page) {
   }
   pageSpan.innerHTML = page;
 
-  if (page == 1) {
+  if (page === 1) {
     btnPrev.style.visibility = "hidden";
   } else {
     btnPrev.style.visibility = "visible";
   }
 
-  if (page == numPages()) {
+  if (page === numPages()) {
     btnNext.style.visibility = "hidden";
   } else {
     btnNext.style.visibility = "visible";

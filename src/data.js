@@ -6,9 +6,9 @@ export function filterData(data, key, value) {
 }
 
 
-export function calcular(data){
+/*export function calcular(data){
   return(data.length * 100 / 493).toFixed()
-  }
+  }*/
 
 export function filterDataOptions(data, key, attr, value) {
   function filter(item) {
