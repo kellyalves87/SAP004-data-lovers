@@ -12,14 +12,26 @@ body {
 .select option{
   color:#04ADBF;
 }
-.select {
-  font-size: 18px; 
+
+.active{
+  color:#04ADBF;
+}
+
+.home :active{
+  font-size: 14px; 
   border: none;
-  border-radius: 5px;
-  padding: 14px 16px;
+  border-radius: 5px;  
   text-shadow: 0 0 0.2em #0DF205;
   color:#04ADBF;
-  font-family:'Oswald', sans-serif;
+  text-align: center;
+}
+
+.select {
+  font-size: 14px; 
+  border: none;
+  border-radius: 5px;
+  text-shadow: 0 0 0.2em #0DF205;
+  color:#04ADBF;
   text-align: center;
 }
 
@@ -57,7 +69,7 @@ body {
 
 footer {
   font-size: 13pt;
-  color: rgb(187, 178, 178);
+  color: #04ADBF;
 }
 
 .social-media {
@@ -70,7 +82,7 @@ footer {
   margin: 450px;
 }
 
-.social-media, .footer, .abstract, .select, .navbar, .btn, .dev, .search::placeholder {
+.social-media, .footer, .abstract, .home, .select, .navbar, .btn, .dev, .search::placeholder {
   font-family: 'Rock Salt', cursive;
 }
 .fa{
@@ -91,13 +103,13 @@ color: inherit;
 }
 
 .media {
-  border: 2px solid transparent;
+  border: 2 px solid transparent;
   display: inline-block;
   width: 35px;
 }
 
 .follow {
-  font-size: 20px;
+  font-size: 26px;
   text-align: center;
   padding-left: 5px;
 }
