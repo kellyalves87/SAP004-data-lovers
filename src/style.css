@@ -52,6 +52,7 @@ body {
 
 footer {
   font-size: 13pt;
+  color: rgb(187, 178, 178);
 }
 
 .social-media {
@@ -65,7 +66,7 @@ footer {
 }
 
 .social-media, .footer, .abstract, .select, .navbar, .btn, .dev, .search::placeholder {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Rock Salt', cursive;
 }
 .fa{
   color:#0DF205;
