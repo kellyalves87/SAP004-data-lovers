@@ -42,12 +42,17 @@ body {
 }
 
 .abstract {
+  display: block;
   font-size: 14pt;
   margin: 170px;
   line-height: 35px;
   padding: 8px;
   padding-left: 35px;
   padding-right: 35px;
+}
+
+#button{
+  display: none;
 }
 
 footer {
@@ -105,17 +110,21 @@ color: inherit;
   border-radius: 20px;
 }
 
-#root div{
+main{
+  width: 100%;
+}
+
+.root div{
   border-radius: 10px;
   background-color: #56BF5D;
   margin: 20px;
   padding: 30px;
   display: inline-block;
   flex-wrap: wrap;
-  flex: 1 1 150px;
-  max-width: 150px;
-  text-align: center;
-  font-size: 15px;
+  flex: 1 1 150px;  
+  width: 14%;
+  text-align-last: center;
+  font-size: 10px;
   font-family: 'Oswald', sans-serif;
 }
 
