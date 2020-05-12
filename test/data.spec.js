@@ -1,4 +1,4 @@
-import { filterData, sortData, removeDuplicates, calcular, filterDataOptions, searchName } from "../src/data.js";
+import { filterData, sortData, removeDuplicates, filterDataOptions, searchName } from "../src/data.js";
 
 const data = [
   {
@@ -60,7 +60,7 @@ describe("fiterData", () => {
   });
   it("filter for key and value", () => {
     const result = filterData(data, "gender", "Female");
-    expect(result.length).toBe();
+    expect(result.length).toBe(2);
   });
   it("don't return item, when filter be invalid", () => {
     const result = filterData(data, "species", "alien");
@@ -73,11 +73,12 @@ describe('sortData', () => {
     expect(typeof sortData).toBe('function');
   });
   it('must ordered for name ascedent',() => {
-    const result = sortData(data, 'name', 'asc');
-    expect(result[0].name).toBe('beth');
-    expect(result[1].name).toBe('joe');
-    expect(result[2].name).toBe('rick');
-    expect(result[3].name).toBe('summer');
+    const result = sortData(data, 'name', 'A-Z');
+    console.log(result);
+    expect(result[0].name).toBe('Beth');
+    expect(result[1].name).toBe('Joe');
+    expect(result[2].name).toBe('Rick');
+    expect(result[3].name).toBe('Summer');
   });
   it('must ordered for name descedent',() => {
     const dataDesc = [
@@ -115,19 +116,19 @@ describe('removeDuplicates', () => {
     expect(typeof removeDuplicates).toBe('function');
   })
   it('must a unique element',() => {
+    const data = [
+      {
+        name: 'summer',
+        gender: 'Female',
+        species: 'Human'
+      },
+      {
+        name: 'summer',
+        gender: 'Female',
+        species: 'Human'
+      }]
     const result = removeDuplicates(data, 'name');
-    expect(result[0].name).toBe('Summer');
-    
-  });
-});
-
-describe('calcular', () => {
-  it('is a function', () => {
-    expect(typeof calcular).toEqual('value');
-  })
-  it('must return a number of pages',() => {
-    const result = calcular(data);
-    expect(result[0].length).toBe('[10]');
+    expect(result.length).toBe(1);
     
   });
 });
@@ -137,8 +138,8 @@ describe('filterDataOptions', () => {
     expect(typeof filterDataOptions).toBe('function');
   })
   it('must return a filter of options',() => {
-    const result = filterDataOptions(data, "key", "attr", "value");
-    expect(result.length).toBe();
+    const result = filterDataOptions(data, "location", "nome", "Bepis 9");
+    expect(result[0].location.nome).toBe("Bepis 9");
     
   });
 });
@@ -148,8 +149,8 @@ describe('searchName', () => {
     expect(typeof searchName).toBe('function');
   })
   it('must return a data names',() => {
-    const result = searchName(data, "name", "value");
-    expect(result.length).toBe();
+    const result = searchName(data, "name", "Beth");
+    expect(result[0].name).toBe("Beth");
     
   });
 });

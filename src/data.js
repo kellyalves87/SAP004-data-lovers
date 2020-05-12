@@ -7,10 +7,6 @@ export function filterData(data, key, value) { //função criada para filtrar os
     return data.filter(filter); //retorna os dados do filtro que recebe um filtro.
 }
 
-export function calcular(data){ //função calcular os dados
-  return(data.length * 100 / 493).toFixed() //retorna o tamanho dos dados vezes 100 divido por 493 convertendo um número em notação de ponto fixo (arredondando o resultado quando necessário) e retornar seu valor como uma sequência.
-  }
-
 export function filterDataOptions(data, key, attr, value) { //função criada para filtrar as opções de dados que recebe dados, chave, atributos e valor.
   function filter(item) { //função filtro recebe um item
     return item[key][attr] === value; //que retorna um item entre a chave e um atributo que é igual ao valor.
