@@ -1,21 +1,6 @@
 body {
-  /*background-image: url('rick&morty.jpeg');
-  background-repeat: no-repeat fixed;
-  background-size: cover;
-  overflow-x: hidden;tira a barra horizontal de rolagem
-  margin: 0;*/
-  overflow-x: hidden;/*tira a barra horizontal de rolagem*/
-  background-color: rgb( 3, 62, 71) ;
-}
-
-.menu-fixed {
-  top: 100%;
-  font: 'Rock Salt', cursive;
-  font-size: 18px;
-  border: none;
-  padding: 14px 16px;
-  background-color:rgb(4, 173, 191);
-  cursor: pointer;
+  overflow-x: hidden;
+  background-color: white
 }
 
 .navbar {
@@ -24,19 +9,18 @@ body {
   overflow: hidden;
   font-size: 13pt;
 }
-
-/*.menu {
-  float: left;
-  overflow: hidden;
-}*/
-
+.select option{
+  color:#04ADBF;
+}
 .select {
-  font-size: 14px;
+  font-size: 18px; 
   border: none;
-  /*outline: none;*/
+  border-radius: 5px;
   padding: 14px 16px;
-  background-color:rgb(4, 173, 191);
-  cursor: pointer;
+  text-shadow: 0 0 0.2em #0DF205;
+  color:#04ADBF;
+  font-family:'Oswald', sans-serif;
+  text-align: center;
 }
 
 .search-bar {
@@ -46,24 +30,22 @@ body {
 
 .search {
   border: none;
-  border-bottom: 1.5px solid rgb(4, 173, 191);
+  border-bottom: 1.5px solid #0DF205;
   width: 200px;
   outline: none;
-  cursor: pointer;
+  margin: 15px;
 }
 
 .search::placeholder {
-  color: rgb(187, 178, 178);
-  font-size: 14px;
+  color: #04ADBF ;
+  font-size: 15px;
 }
 
 .abstract {
   font-size: 14pt;
-  border-radius: 3px;
-  background-color: rgba(132, 147, 191);
   margin: 170px;
-  padding: 8px;
   line-height: 35px;
+  padding: 8px;
   padding-left: 35px;
   padding-right: 35px;
 }
@@ -74,20 +56,23 @@ footer {
 }
 
 .social-media {
-  font-size: 20px;
-  cursor: pointer;
-  
-  
-  /*border: 1px solid rgb(201, 236, 129);
-  padding: 2px;*/
+  display: block;
+  text-align: center; 
+  padding:15px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:15px;
+  margin: 450px;
 }
 
 .social-media, .footer, .abstract, .select, .navbar, .btn, .dev, .search::placeholder {
   font-family: 'Rock Salt', cursive;
 }
-
-.select,.search, .social-media {
-  color: black;
+.fa{
+  color:#0DF205;
+}
+.abstract, .footer, .social-media,  .follow, .dev {
+  color: #04ADBF;
 }
 
 .navbar, .enter, .search {
@@ -96,6 +81,9 @@ footer {
 .btn, .abstract a{
 color: inherit;
 }
+.abstract, .social-media {
+  border-radius: 10px;
+}
 
 .media {
   border: 2px solid transparent;
@@ -103,43 +91,52 @@ color: inherit;
   width: 35px;
 }
 
-.fa {
-  color: rgb(4, 173, 191);
-  size: 10px;
-}
-
 .follow {
-  font-size: 25px;
-  text-align: left;
+  font-size: 20px;
+  text-align: center;
   padding-left: 5px;
 }
 
   img {
-  display: inline-block;
-  width: 250px;
-  height: 250px;
-  background-color: rgb(4, 173, 191);
-  margin: 10px;
-  padding: 10px;
-  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  background-color: #D4D952;
+  padding: 3px;
   border-radius: 20px;
 }
-.btn{
-  width:35px;
-  font-size: 20px;
-  color: rgb(187, 178, 178);
+
+#root div{
+  border-radius: 10px;
+  background-color: #56BF5D;
+  margin: 20px;
+  padding: 30px;
+  display: inline-block;
+  flex-wrap: wrap;
+  flex: 1 1 150px;
+  max-width: 150px;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
 }
+
+.btn{
+  font-size: 20px;
+  text-decoration: none;
+  color: #56BF5D;
+}
+
 #btn-next{
   position: absolute;
   right: 15%;
 }
+
 #btn-prev{
   position: absolute;
   left: 15%;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #033E47;
+  background-color: #04ADBF;
 }
 
 ::-webkit-scrollbar {
@@ -147,14 +144,10 @@ color: inherit;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(4, 173, 191);
+  background: #0DF205;
 }
 
-@media screen and (max-width:800px) {
-  .select {
-    padding: 2px 1px;
-    position: relative;
-  }
+@media screen and (max-width: 800px) {
   .search {
     width: 150px;
     top: 50px;
@@ -164,11 +157,25 @@ color: inherit;
     margin: 20px;
     padding: 20px;
   }
-  .navbar {
-    display: flex;
-    height: 60px;
+  
+  .social-media{
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin: 100px;
+    display: block;
   }
-  .navbar, .search, .enter {
-    background-color: transparent;
+  img{
+    margin: 5px;
+  }
+  
+  .navbar {
+    display: block; 
+  }
+  .select{
+    margin: 5px;
+    display: flex;
+    width: 40%;
   }
 }
