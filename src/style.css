@@ -53,7 +53,7 @@ body {
   font-size: 15px;
 }
 
-.abstract {
+.abstract { 
   display: block;
   font-size: 14pt;
   margin: 170px;
@@ -63,7 +63,7 @@ body {
   padding-right: 35px;
 }
 
-#button{
+#button{ /*id criada para sumir os botões da paginação prev e next*/
   display: none;
 }
 
@@ -126,7 +126,7 @@ main{
   width: 100%;
 }
 
-.root div{
+.root div{ /*mudança nesta class para ajustar o tamanho dos cards e alinhá-los na paginação*/
   border-radius: 10px;
   background-color: #56BF5D;
   margin: 20px;
