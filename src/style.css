@@ -12,7 +12,6 @@ body {
   font-size: 20px; 
   border: none;
   border-radius: 5px;
-  padding: 14px 16px;
   text-shadow: 0 0 0.2em #0DF205;
   color:#04ADBF;
   text-align: center;
@@ -41,24 +40,82 @@ body {
   padding-left: 35px;
   padding-right: 35px;
 }
-img {
+
+#button{ /*id criada para sumir os botões da paginação prev e next*/
+  display: none;
+}
+
+footer {
+  font-size: 13pt;
+  color: #04ADBF;
+}
+
+.social-media {
+  display: block;
+  text-align: center; 
+  padding:15px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:15px;
+  margin: 450px;
+}
+
+.social-media, .footer, .abstract, .home, .select, .navbar, .btn, .dev, .search::placeholder {
+  font-family: 'Rock Salt', cursive;
+}
+.fa{
+  color:#0DF205;
+}
+.abstract, .footer, .social-media,  .follow, .dev {
+  color: #04ADBF;
+}
+
+.navbar, .enter, .search {
+  background-color: transparent;
+}
+.btn, .abstract a{
+color: inherit;
+}
+.abstract, .social-media {
+  border-radius: 10px;
+}
+
+.media {
+  border: 2 px solid transparent;
+  display: inline-block;
+  width: 35px;
+}
+
+.follow {
+  font-size: 26px;
+  text-align: center;
+  padding-left: 5px;
+}
+
+  img {
   width: 150px;
   height: 150px;
   background-color: #D4D952;
   padding: 3px;
   border-radius: 20px;
 }
-#root div {
+
+main{
+  width: 100%;
+}
+
+.root div{ /*mudança nesta class para ajustar o tamanho dos cards e alinhá-los na paginação*/
   border-radius: 10px;
   background-color: #56BF5D;
   margin: 20px;
   padding: 30px;
   display: inline-block;
   flex-wrap: wrap;
-  flex: 1 1 150px;
-  max-width: 150px;
-  text-align: center;
-  font-size: 15px;
+  flex: 1 1 150px;  
+  width: 14%;
+  text-align-last: center;
+  font-size: 10px;
+  font-family: 'Oswald', sans-serif;
 }
 .paragrafo {
   font-size: 16px;

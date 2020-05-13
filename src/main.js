@@ -23,8 +23,11 @@ dropDownLocalation.innerHTML = dropDown( //menu suspenso localização recebe o 
   "Localização"
 );
 
+let abstract = document.getElementById("abstract"); //variável criada para que o conteúdo da página inicial aparecesse somente na home.
+
 const status = document.getElementById("status"); //variável criada para o status que é igual ao documento que recebe o elemento por identificação "status" vindo do HTML.
 status.addEventListener("change", function () { //status recebe o evento que escuta o menu quando for trocado, 
+  abstract.style.display = "none"; //adicionando estilo a variável criada para que o abstract suma quando a gente clique nos menus para aparição dos cards.
   onChange(data.results, "status", status.value); //a função mudança que recebe o resultado dos dados que buscamos no banco de dados, o nome status e o valor do status.
 });
 
@@ -50,7 +53,7 @@ location.addEventListener("change", function () { //localização recebe o event
     "location",
     "name",
     location.value
-  );
+  ); 
 });
 
 const sort = document.getElementById("sort"); //variável criada para ordem alfabetica que é igual ao documento que recebe o elemento por identificação "ordem alfabetica" vindo do HTML.
