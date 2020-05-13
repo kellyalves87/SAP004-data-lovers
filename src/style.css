@@ -54,7 +54,7 @@ body {
 }
 
 .abstract { 
-  display: block;
+  display: block; /*não esquecer de colocar no codigo da Aline*/
   font-size: 14pt;
   margin: 170px;
   line-height: 35px;
