@@ -3,12 +3,12 @@
 export function generateCard(item, index) { //função criada para geração dos Cards que recebe um item e o index(dados do html).
     return `<div id="${index}"> 
         <img src="${item.image}">
-        <p class="pnome">${item.name}</p>
-        <p class="parag">Status: ${item.status}</p>
-        <p class="parag">Specie: ${item.species}</p>
-        <p class="parag">Gênero: ${item.gender}</p>
-        <p class="parag">Origem: ${item.origin.name}</p>
-        <p class="parag">Localização: ${item.location.name}</p>
+        <p class="paragrafo-nome">${item.name}</p>
+        <p class="paragrafo">Status: ${item.status}</p>
+        <p class="paragrafo">Specie: ${item.species}</p>
+        <p class="paragrafo">Gênero: ${item.gender}</p>
+        <p class="paragrafo">Origem: ${item.origin.name}</p>
+        <p class="paragrafo">Localização: ${item.location.name}</p>
         </div>
         `;
     }

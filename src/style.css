@@ -60,12 +60,12 @@ img {
   text-align: center;
   font-size: 15px;
 }
-.parag {
+.paragrafo {
   font-size: 16px;
   text-align: left;
   border-bottom: 1px solid #CCC;
 }
-.pnome{
+.paragrafo-nome {
   font-size: 18px;
 }
 .social-media {
@@ -90,7 +90,6 @@ img {
 .btn {
   font-size: 20px;
   text-decoration: none;
-  color: #56BF5D;
 }
 #btn-next {
   position: absolute;
@@ -116,7 +115,7 @@ footer {
 .btn, .abstract a{
   color: inherit;
   }
-.fa{
+.btn, .fa{
     color:#0DF205;
   }
 ::-webkit-scrollbar-track {
@@ -128,7 +127,6 @@ footer {
 ::-webkit-scrollbar-thumb {
   background: #0DF205;
 }
-
 
 @media screen and (max-width: 1050px) {
   .navbar {
@@ -151,7 +149,7 @@ footer {
   img{
     margin: 5px;
   }
-  .social-media{
+  .social-media {
     padding: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -159,7 +157,7 @@ footer {
     margin: 100px;
     display: block;
   }
-  .media{
+  .media {
     display: inline;
   }
 }
