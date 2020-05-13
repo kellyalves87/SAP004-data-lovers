@@ -4,16 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rick and Morty</title>
-    <link rel="shortcut-icon" type="image-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="home">
@@ -54,20 +48,16 @@
 
       <select id="location" class="select"> </select>
 
-      <select id="sort" class="select">
-        <option value="none" selected disabled>Ordem alfabética</option>
-        <option value="A-Z">A-Z</option>
-        <option value="Z-A">Z-A</option>
-      </select>
-      <label class="search-bar">
-        <input
-          type="text"
-          class="search"
-          id="search-name"
-          placeholder="Pesquisar por nome..."
-        />
-      </label>
-    </nav>
+        <select id="sort" class="select">
+          <option value="none" selected disabled>Ordem alfabética</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+        </select>
+        <label class="search-bar">
+          <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..."/>       
+        </label>     
+      </nav>
+    
     <section class="abstract" id="abstract">
       <p>
         A série Rick and Morty foi criada em 2013 por
@@ -93,6 +83,7 @@
       <div id="button">
         <a href="#" class="btn" id="btn-prev">Prev</a>
         <a href="#" class="btn" id="btn-next">Next</a>
+        <span class="btn" id="page">page:</span>
       </div>
     </main>
 
