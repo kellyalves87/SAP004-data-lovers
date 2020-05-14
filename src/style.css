@@ -138,3 +138,36 @@ main{
   ::-webkit-scrollbar-thumb {
     background: #0DF205
   }
+  @media screen and (max-width: 1050px) {
+    .navbar {
+      display: block; 
+    }
+    .select {
+      margin: 5px;
+      display: block;
+      width: 100%;
+    }
+    .search {
+      width: 150px;
+      top: 50px;
+      left: 90px;
+    }
+    .abstract {
+      margin: 20px;
+      padding: 20px;
+    }
+    img{
+      margin: 5px;
+    }
+    .social-media {
+      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      margin: 100px;
+      display: block;
+    }
+    .media {
+      display: inline;
+    }
+  }
