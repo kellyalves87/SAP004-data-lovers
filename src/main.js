@@ -24,7 +24,7 @@ dropDownLocalation.innerHTML = dropDown(
 let abstract = document.getElementById("abstract");
 
 const status = document.getElementById("status");
-status.addEventListener("change", function () {
+status.addEventListener("change", function () {  
   abstract.style.display = "none";
   onChange(data.results, "status", status.value);
 });

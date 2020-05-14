@@ -8,7 +8,7 @@ body {
   overflow: hidden;
   font-size: 13pt;
 }
-.select {
+.select, .active {
   font-size: 20px; 
   border: none;
   border-radius: 5px;
@@ -47,6 +47,12 @@ body {
   visibility: hidden;
 }
 
+.video p {  
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #04ADBF
+}
 .video {
   width: 560px;
   margin: 2em auto;
