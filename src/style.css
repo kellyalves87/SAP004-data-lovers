@@ -1,20 +1,20 @@
-body {
+.body {
   overflow-x: hidden;
   background-color: white;
 }
-.home, .active{
+/*.active{
   text-shadow: 0 0 0.1em #0DF205;
   color:#04ADBF;
   font-size: 20px;
   text-align: left;
-}
+}*/
 .navbar {
   top: 100%;
   width: 100%;
   overflow: hidden;
   font-size: 13pt;
 }
-.select {
+.select, .active {
   font-size: 20px; 
   border: none;
   border-radius: 5px;
@@ -39,7 +39,6 @@ body {
   color: #04ADBF;
   font-size: 15px;
 }
-
 .abstract { 
   display: block; /*não esquecer de colocar no codigo da Aline*/
   font-size: 14pt;
@@ -49,16 +48,6 @@ body {
   padding-left: 35px;
   padding-right: 35px;
 }
-
-#button {
-  visibility: hidden;
-}
-
-footer {
-  font-size: 13pt;
-  color: #04ADBF;
-}
-
 .social-media {
   display: block;
 }
@@ -69,21 +58,30 @@ img {
   padding: 3px;
   border-radius: 20px;
 }
-main{
+main {
   width: 100%;
 }
-.root div{ /*mudança nesta class para ajustar o tamanho dos cards e alinhá-los na paginação*/
+.root div { /*mudança nesta class para ajustar o tamanho dos cards e alinhá-los na paginação*/
   border-radius: 10px;
   background-color: #56BF5D;
   margin: 20px;
   padding: 30px;
-  display: inline-block;
+  /*display: inline-block;
   flex-wrap: wrap;
-  flex: 1 1 150px;  
-  width: 14%;
-  text-align-last: center;
+  flex: 1 1 150px;
+  width: 14%;*/
+  /*text-align-last: left;*/
   font-size: 10px;
   font-family: 'Oswald', sans-serif;
+
+}
+.root{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1 1 150px;
+  text-align: center; 
 }
 .paragrafo {
   font-size: 16px;
@@ -92,6 +90,7 @@ main{
 }
 .paragrafo-nome {
   font-size: 18px;
+  text-align: center;
 }
 .btn {
   font-size: 20px;
@@ -127,15 +126,22 @@ main{
   text-align: center;
   padding-left: 5px;
 }
+footer {
+  font-size: 13pt;
+  color: #04ADBF;
+}
 .social-media, .footer, .abstract, .select, .navbar, .btn, .dev, #root div, .active, .search::placeholder {
   font-family: 'Oswald', sans-serif;
 }
 .abstract, .footer, .social-media,  .follow, .dev {
   color: #04ADBF;
 }
-.abstract a, .active{
+.active{
   color: inherit;
   text-decoration: none;
+}
+.abstract a{
+  color: inherit;
 }
 .abstract, .social-media {
   border-radius: 10px;
@@ -150,7 +156,7 @@ main{
     width: 10px;
   }
   ::-webkit-scrollbar-thumb {
-    background: #0DF205
+    background: #0DF205;
   }
   @media screen and (max-width: 1050px) {
     .navbar {
