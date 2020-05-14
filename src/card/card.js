@@ -1,5 +1,5 @@
 export function generateCard(item, index) { 
-    return `<div id="${index}"> 
+    return `<div id="${index} class="card-personagem"> 
         <img src="${item.image}">
         <p class="paragrafo-nome">${item.name}</p>
         <p class="paragrafo">Status: ${item.status}</p>
