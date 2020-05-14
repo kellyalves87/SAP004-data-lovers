@@ -36,7 +36,7 @@ body {
 .abstract { 
   display: block; /*não esquecer de colocar no codigo da Aline*/
   font-size: 14pt;
-  margin: 170px;
+  margin: px;
   line-height: 35px;
   padding: 8px;
   padding-left: 35px;
@@ -45,6 +45,11 @@ body {
 
 #button {
   visibility: hidden;
+}
+
+.video {
+  width: 560px;
+  margin: 2em auto;
 }
 
 footer {
