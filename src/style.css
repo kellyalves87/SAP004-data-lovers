@@ -39,13 +39,27 @@ body {
   color: #04ADBF;
   font-size: 15px;
 }
-.abstract {
+
+.abstract { 
+  display: block; /*não esquecer de colocar no codigo da Aline*/
   font-size: 14pt;
   margin: 170px;
   line-height: 35px;
   padding: 8px;
   padding-left: 35px;
   padding-right: 35px;
+}
+
+#button {
+  visibility: hidden;
+}
+
+footer {
+  font-size: 13pt;
+  color: #04ADBF;
+}
+
+.social-media {
   display: block;
 }
 img {

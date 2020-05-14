@@ -1,6 +1,4 @@
-//Neste arquivo deixei apenas a função para criar os cards.
-
-export function generateCard(item, index) { //função criada para geração dos Cards que recebe um item e o index(dados do html).
+export function generateCard(item, index) { 
     return `<div id="${index}"> 
         <img src="${item.image}">
         <p class="paragrafo-nome">${item.name}</p>
@@ -13,4 +11,3 @@ export function generateCard(item, index) { //função criada para geração dos
         `;
     }
 
-  //que nos retorna uma div com todos os itens que desejamos que apareça no card.
