@@ -1,137 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rick and Morty</title>
-    <link rel="shortcut-icon" type="image-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rick and Morty</title>
+  <link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
     <nav class="navbar">
-      <a class="active" href="index.html">Home</a>
-      <select id="status" class="select">
-        <option value="none" selected disabled>Status</option>
-        <option value="Alive">Vivo</option>
-        <option value="Dead">Morto</option>
-        <option value="unknown">Desconhecido</option>
-      </select>
-
-      <select id="gender" class="select">
-        <option value="none" selected disabled>Gênero</option>
-        <option value="Female">Feminino</option>
-        <option value="Male">Masculino</option>
-        <option value="unknown">Indefinido</option>
-      </select>
-
-      <select id="species" class="select">
-        <option value="none" selected disabled>Espécie</option>
-        <option value="Alien">Alien</option>
-        <option value="Animal">Animal</option>
-        <option value="Cronenberg">Cronenberg</option>
-        <option value="Disease">Disease</option>
-        <option value="Human">Humano</option>
-        <option value="Humanoid">Humanoide</option>
-        <option value="Mytholog">Mitológico</option>
-        <option value="Parasite">Parasita</option>
-        <option value="Poopybutthole">Poopybutthole</option>
-        <option value="Robot">Robô</option>
-        <option value="unknown">Unknown</option>
-        <option value="Vampire">Vampiro</option>
-      </select>
-
-      <select id="origin" class="select"> </select>
-
-      <select id="location" class="select"> </select>
-
-      <select id="sort" class="select">
-        <option value="none" selected disabled>Ordem alfabética</option>
-        <option value="A-Z">A-Z</option>
-        <option value="Z-A">Z-A</option>
-      </select>
+      <ul class="nav-list">
+        <li class="home">
+          <a class="active" href="index.html">Home</a>
+        </li>
+        <li>
+          <select id="status" class="select">
+            <option value="none" selected disabled>Status</option>
+            <option value="Alive">Vivo</option>
+            <option value="Dead">Morto</option>
+            <option value="unknown">Desconhecido</option>
+          </select>
+        </li>
+        <li>
+          <select id="gender" class="select">
+            <option value="none" selected disabled>Gênero</option>
+            <option value="Female">Feminino</option>
+            <option value="Male">Masculino</option>
+            <option value="unknown">Indefinido</option>
+          </select>
+        </li>
+        <li>
+          <select id="species" class="select">
+            <option value="none" selected disabled>Espécie</option>
+            <option value="Alien">Alien</option>
+            <option value="Animal">Animal</option>
+            <option value="Cronenberg">Cronenberg</option>
+            <option value="Disease">Disease</option>
+            <option value="Human">Humano</option>
+            <option value="Humanoid">Humanoide</option>
+            <option value="Mytholog">Mitológico</option>
+            <option value="Parasite">Parasita</option>
+            <option value="Poopybutthole">Poopybutthole</option>
+            <option value="Robot">Robô</option>
+            <option value="unknown">Unknown</option>
+            <option value="Vampire">Vampiro</option>
+          </select>
+        </li>
+        <li>
+          <select id="origin" class="select"> </select>
+        </li>
+        <li>
+          <select id="location" class="select"> </select>
+        </li>
+        <li>
+          <select id="sort" class="select">
+            <option value="none" selected disabled>Ordenar</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+        </li>
+      </ul>
       <label class="search-bar">
-        <input
-          type="text"
-          class="search"
-          id="search-name"
-          placeholder="Pesquisar por nome..."
-        />
+        <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
       </label>
     </nav>
-
-    <section class="abstract" id="abstract">
-      <p>
-        A série Rick and Morty foi criada em 2013 por
-        <a href="https://pt.wikipedia.org/wiki/Justin_Roiland" target="_blank"
-          >Justin Roiland</a
-        >
-        e
-        <a href="https://en.wikipedia.org/wiki/Dan_Harmon" target="_blank"
-          >Dan Harmon</a
-        >
-        e mostra as aventuras insólitas do cientista beberrão Rick Sanchez e seu
-        neto inseguro e com hormônios em ebulição Morty Smith, membros de uma
-        família tipica americana, composta também por Jerry, um pai ignorante;
-        Beth, uma mãe sensata e Summer, a irmã mais velha, típica adolescente
-        alienada, que se compadece do irmão quando passa a fazer parte das
-        aventuras de seu avô. Entre planetas, universos, realidades paralelas,
-        problemas conjugais, e TV a cabo, Rick and Morty é uma série sobre a
-        nossa insignificância perante a tudo o que existe.
-      </p>
+  </header>
+  <section class="abstract" id="abstract">
+    <p>
+      A série Rick and Morty foi criada em 2013 por
+      <a href="https://pt.wikipedia.org/wiki/Justin_Roiland" target="_blank">Justin Roiland</a>
+      e
+      <a href="https://en.wikipedia.org/wiki/Dan_Harmon" target="_blank">Dan Harmon</a>
+      e mostra as aventuras insólitas do cientista beberrão Rick Sanchez e seu
+      neto inseguro e com hormônios em ebulição Morty Smith, membros de uma
+      família tipica americana, composta também por Jerry, um pai ignorante;
+      Beth, uma mãe sensata e Summer, a irmã mais velha, típica adolescente
+      alienada, que se compadece do irmão quando passa a fazer parte das
+      aventuras de seu avô. Entre planetas, universos, realidades paralelas,
+      problemas conjugais, e TV a cabo, Rick and Morty é uma série sobre a
+      nossa insignificância perante a tudo o que existe.
+    </p>
+  </section>  
+  <main>
+    <ul id="root" class="root"></ul>
+    <section id="button">
+      <a href="#" class="btn" id="btn-prev">Prev</a>
+      <a href="#" class="btn" id="btn-next">Next</a>
+      <span class="btn" id="page">page:</span>
     </section>
-    <main>
-      <div id="root" class="root"></div>
-      <div id="button">
-        <a href="#" class="btn" id="btn-prev">Prev</a>
-        <a href="#" class="btn" id="btn-next">Next</a>
-        <span class="btn" id="page">page:</span>
-      </div>      
-    </main>
-    <section class="video" id="video">
-      <p>Confira o video promocional da primeira temporada:</p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/WNhH00OIPP0"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </section>
-    <div class="social-media">
+  </main>
+  
+  <footer>
+    <section class="social-media">      
       <p class="follow">Rick and Morty</p>
-      <a
-        href="https://www.facebook.com/RickandMorty/"
-        target="_blank"
-        class="media"
-        ><i class="fa fa-facebook"></i
-      ></a>
-      <a
-        href="https://www.instagram.com/rickandmorty/?hl=en"
-        target="_blank"
-        class="media"
-        ><i class="fa fa-instagram"></i
-      ></a>
-      <a
-        href="https://www.youtube.com/channel/UCel52OboABOS8kqa4PW37FA"
-        target="_blank"
-        class="media"
-        ><i class="fa fa-youtube"></i
-      ></a>
-    </div>
-
-    <footer>
-      <p class="dev">© Desenvolvido por Aline Souza e Kelly Alves</p>
-    </footer>
-
-    <script src="main.js" type="module"></script>
-  </body>
+      <a href="https://www.facebook.com/RickandMorty/" target="_blank" class="media"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/rickandmorty/?hl=en" target="_blank" class="media"><i
+          class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCel52OboABOS8kqa4PW37FA" target="_blank" class="media"><i
+          class="fa fa-youtube"></i></a>
+    </section>
+    <p class="dev">© Desenvolvido por Aline Souza e Kelly Alves</p>
+  </footer>
+  <script src="main.js" type="module"></script>    
+</body>
 </html>

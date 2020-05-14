@@ -1,5 +1,5 @@
 export function generateCard(item, index) { 
-    return `<div id="${index}"> 
+    return `<li id="${index}"> 
         <img src="${item.image}">
         <p class="paragrafo-nome">${item.name}</p>
         <p class="paragrafo">Status: ${item.status}</p>
@@ -7,7 +7,7 @@ export function generateCard(item, index) {
         <p class="paragrafo">Gênero: ${item.gender}</p>
         <p class="paragrafo">Origem: ${item.origin.name}</p>
         <p class="paragrafo">Localização: ${item.location.name}</p>
-        </div>
+        </li>
         `;
     }
 
