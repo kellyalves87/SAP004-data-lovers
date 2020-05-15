@@ -89,6 +89,7 @@ main {
 }
 .nav-list{
   display: flex;
+  width: inherit;
 }
 .paragrafo {
   font-size: 16px;
@@ -114,6 +115,13 @@ main {
 #button { /*id criada para sumir os botões da paginação prev e next*/
   visibility: hidden;
 }
+
+.video p{
+  font-family: 'Oswald', sans-serif;
+  color: #04ADBF;
+  text-align: center;
+}
+
 .social-media {
   display: block;
   text-align: center; 

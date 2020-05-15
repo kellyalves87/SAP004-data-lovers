@@ -1,6 +1,6 @@
 import data from "./data/rickandmorty/rickandmorty.js";
 import { dropDown } from "./dropdown/dropdown.js";
-import { removeDuplicates } from "./data.js";
+import { removeDuplicates, sortDataNested } from "./data.js";
 import {
   onChange,
   onChangeSearchByNestedObject,
@@ -11,14 +11,10 @@ import {nextPage, prevPage} from "./pagination/pagination.js";
 
 const duplicatesOrigin = removeDuplicates(data.results, "origin"); 
 const dropDownOrigin = document.getElementById("origin");
-dropDownOrigin.innerHTML = dropDown(duplicatesOrigin, "origin", "Origem");
+dropDownOrigin.innerHTML = dropDown(sortDataNested(duplicatesOrigin, "origin", "name"), "origin", "Origem");
 const duplicatesLocation = removeDuplicates(data.results, "location"); 
 const dropDownLocalation = document.getElementById("location");
-dropDownLocalation.innerHTML = dropDown( 
-  duplicatesLocation,
-  "location",
-  "Localização"
-);
+dropDownLocalation.innerHTML = dropDown(sortDataNested(duplicatesLocation, "location", "name"), "location", "Localização");
 
 let abstract = document.getElementById("abstract");
 

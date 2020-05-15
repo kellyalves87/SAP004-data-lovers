@@ -20,6 +20,12 @@ export function sortData(data, name, optionValue) {
 
 }
 
+export function sortDataNested(data, name, value) {
+
+  return data.sort((elem1, elem2) => elem1[name][value] > elem2[name][value] ? 1 : -1);
+
+}
+
 export function removeDuplicates(data, name) {
   return data.reduce((unique, elem) => {
     if (!unique.some((ob) => ob[name].name === elem[name].name)) {
