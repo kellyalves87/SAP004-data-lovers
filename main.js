@@ -25,7 +25,7 @@ status.addEventListener("change", function () {
   const percentage = makeStatistics(data.results, "status", status.value);
 
   let result = document.getElementById("statistics");
-  result.innerHTML = `${percentage}% dos personagens estão no status: ${status.value}`;
+  result.innerHTML = `${percentage}% of characters in status are: ${status.value}`;
 });
 
 const gender = document.getElementById("gender"); 
@@ -34,7 +34,7 @@ gender.addEventListener("change", function () {
   const percentageGender = makeStatistics(data.results, "gender", gender.value);
 
   let result = document.getElementById("statistics");
-  result.innerHTML = `${percentageGender}% dos personagens estão no gênero: ${gender.value}`;
+  result.innerHTML = `${percentageGender}% the gender of the characters are: ${gender.value}`;
 });
 
 const species = document.getElementById("species"); 
@@ -43,8 +43,7 @@ species.addEventListener("change", function () {
   const percentageSpecies = makeStatistics(data.results, "species", species.value);
 
   let result = document.getElementById("statistics");
-  result.innerHTML = `${percentageSpecies}% dos personagens estão nas espécies: ${species.value}`;
-   
+  result.innerHTML = `${percentageSpecies}% of species of the characters are: ${species.value}`;   
 });
 
 const origin = document.getElementById("origin"); 
