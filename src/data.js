@@ -42,7 +42,7 @@ export function searchName(data, name, value) {
 
 export function makeStatistics(data, name, value) {
   if (!data || !name) {
-    return TypeError('no data has been provided');
+    throw TypeError('no data has been provided');
   }
 
   let typeName = 0
@@ -51,6 +51,6 @@ export function makeStatistics(data, name, value) {
       typeName++;
     }
   }
-  let finalPercentage = typeName / data.length * 100
-  return finalPercentage.toFixed(2)
-};
+  let finalPercentage = typeName / data.length * 100;
+  return finalPercentage.toFixed(2);
+}
