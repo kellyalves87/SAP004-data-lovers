@@ -1,6 +1,6 @@
 import data from "./data/rickandmorty/rickandmorty.js";
 import { dropDown } from "./dropdown/dropdown.js";
-import { removeDuplicates, sortDataNested } from "./data.js";
+import { removeDuplicates, sortDataNested, makeStatistics } from "./data.js";
 import {
   onChange,
   onChangeSearchByNestedObject,
@@ -22,16 +22,29 @@ const status = document.getElementById("status");
 status.addEventListener("change", function () { 
   abstract.style.display = "none"; 
   onChange(data.results, "status", status.value);
+  const percentage = makeStatistics(data.results, "status", status.value);
+
+  let result = document.getElementById("statistics");
+  result.innerHTML = `${percentage}% dos personagens estão no status: ${status.value}`;
 });
 
 const gender = document.getElementById("gender"); 
 gender.addEventListener("change", function () { 
   onChange(data.results, "gender", gender.value);
+  const percentageGender = makeStatistics(data.results, "gender", gender.value);
+
+  let result = document.getElementById("statistics");
+  result.innerHTML = `${percentageGender}% dos personagens estão no gênero: ${gender.value}`;
 });
 
 const species = document.getElementById("species"); 
 species.addEventListener("change", function () { 
-  onChange(data.results, "species", species.value); 
+  onChange(data.results, "species", species.value);
+  const percentageSpecies = makeStatistics(data.results, "species", species.value);
+
+  let result = document.getElementById("statistics");
+  result.innerHTML = `${percentageSpecies}% dos personagens estão nas espécies: ${species.value}`;
+   
 });
 
 const origin = document.getElementById("origin"); 

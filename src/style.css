@@ -1,13 +1,8 @@
 .body {
   overflow-x: hidden;
-  background-color: white;
+  background-color: whitesmoke;
 }
-/*.active{
-  text-shadow: 0 0 0.1em #0DF205;
-  color:#04ADBF;
-  font-size: 20px;
-  text-align: left;
-}*/
+
 .navbar {
   top: 100%;
   width: 100%;
@@ -120,6 +115,14 @@ main {
   font-family: 'Oswald', sans-serif;
   color: #04ADBF;
   text-align: center;
+}
+
+.video {
+  position: absolute;
+  width: 300px;
+  height: 100px;  
+  left: 250px;
+  right: 250px;
 }
 
 .social-media {
