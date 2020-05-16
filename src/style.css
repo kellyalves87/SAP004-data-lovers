@@ -1,4 +1,4 @@
-.body {
+body {
   overflow-x: hidden;
   background-color: white;
 }
@@ -17,16 +17,17 @@
 }
 .home {
   padding: 0px 30px;
+  color:#04ADBF;
 }
 .select, .active {
   font-size: 20px; 
-  border: none;
+  color:#04ADBF;
   border-radius: 5px;
   text-shadow: 0 0 0.1em #0DF205;
-  color:#04ADBF;
   text-align: center;
-  width: 140px;
+  border: none;
   outline-style: none;
+  width: 140px;
 }
 .search-bar {
   float: right;
@@ -44,7 +45,7 @@
   font-size: 15px;
 }
 .abstract { 
-  display: block; /*não esquecer de colocar no codigo da Aline*/
+  display: block;
   font-size: 14pt;
   margin: 170px;
   line-height: 35px;
@@ -65,16 +66,11 @@ img {
 main {
   width: 100%;
 }
-.root li { /*mudança nesta class para ajustar o tamanho dos cards e alinhá-los na paginação*/
+.root li { 
   border-radius: 10px;
   background-color: #56BF5D;
   margin: 20px;
   padding: 30px;
-  /*display: inline-block;
-  flex-wrap: wrap;
-  flex: 1 1 150px;
-  width: 14%;*/
-  /*text-align-last: left;*/
   font-size: 10px;
   font-family: 'Oswald', sans-serif;
   width: 15%;
@@ -89,13 +85,14 @@ main {
 }
 .nav-list{
   display: flex;
+  
 }
-.paragrafo {
+.paragraph {
   font-size: 16px;
   text-align: left;
   border-bottom: 1px solid #CCC;
 }
-.paragrafo-nome {
+.paragraph-name {
   font-size: 18px;
   text-align: center;
 }
@@ -111,9 +108,16 @@ main {
   position: absolute;
   left: 15%;
 }
-#button { /*id criada para sumir os botões da paginação prev e next*/
+#button { 
   visibility: hidden;
 }
+
+.video p{
+  font-family: 'Oswald', sans-serif;
+  color: #04ADBF;
+  text-align: center;
+}
+
 .social-media {
   display: block;
   text-align: center; 
@@ -167,15 +171,36 @@ footer {
   @media screen and (max-width: 815px) {
     .navbar {
       display: block; 
+      background-color: black;
     }
     header{
       position: fixed;
       bottom: 0;
     }
-    .select {
+    /*.nav-list{ 
+    display: flex;
+    width: 140%;
+    margin: auto;
+    padding: inherit;
+    background-color: black;
+  }*/
+  /*.search{
+    display: none;
+  }
+    .dev{
+      display: none;
+    }*/
+    body{
+      background-color: burlywood;
+      margin: 0;
+    }
+  
+    .select,.active {
       margin: 5px;
       display: block;
       width: 100%;
+      color: #0DF205;
+      background-color: black;
     }
     .search {
       width: 150px;
@@ -183,8 +208,9 @@ footer {
       left: 90px;
     }
     .abstract {
-      margin: 20px;
-      padding: 20px;
+      margin: 30px;
+      padding: 30px;
+      
     }
     img{
       margin: 5px;
@@ -204,4 +230,72 @@ footer {
     .media {
       display: inline;
     }
+    :before,
+    :after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .menu{
+      background: black;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 0 0 rgb(22, 22, 22), 0 0 0 0 rgb(22, 22, 22);
+      transition: box-shadow 1s ease-in-out;
+      display: block;
+    }
+    .hamb{
+      display: block;
+      background: #0DF205;
+      width: 30px;
+      height: 2px;
+      position: relative;
+      top: 29px;
+      left: 15px;
+      transition: .5s ease-in-out;
+    }
+    .hamb:before,
+    .hamb:after{
+      background: #0DF205;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: .5s ease-in-out;
+    }
+    .hamb:before{
+      top: -10px;
+    }
+    .hamb:after{
+      bottom: -10px;
+    }
+    .label [for="menu-hamb"]{
+      display: none;
+    }
+    input{
+      display: none;
+    }
+    input:checked ~label .hamb{
+      transform: rotate(45deg);
+    }
+    input:checked ~label .hamb:before{
+      transform: rotate(90deg);
+      top: 0;
   }
+    input:checked ~label .hamb:after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+    input:checked ~label .menu{
+    box-shadow: 0 0 0 300vw black, 0 0 0 100vh;
+  }
+    #menu-hamb:checked ~ .nav-list{
+    transform: translateX(300px);
+  }
+  }    
