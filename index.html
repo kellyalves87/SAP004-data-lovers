@@ -11,14 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li class="home">
-          <a class="active" href="index.html">Home</a>
-        </li>
-        <li>
-          <select id="status" class="select">
+    <header>
+      <input type="checkbox" id="menu" class="menu"> <!--ALINE-->
+      <nav>
+        <ul>
+          <li class="home">
+            <a class="active" href="index.html">Home</a>
+          </li>
+          <li>
+            <select id="status" class="select">
             <option value="none" selected disabled>Status</option>
             <option value="Alive">Vivo</option>
             <option value="Dead">Morto</option>
@@ -63,14 +64,18 @@
             <option value="Z-A">Z-A</option>
           </select>
         </li>
-      </ul>
-      <label class="search-bar">
-        <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
+        </ul>
+        <label class="search-bar">
+          <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
+        </label>
+      </nav>
+      <label for="menu" class="menu-label">
+        <span></span>
       </label>
-    </nav>
-  </header>
+    </header>
+  
   <section class="abstract" id="abstract">
-    <p>
+    <p class="text"> <!--ALINE. ADICIONEI CLASSE-->
       A série Rick and Morty foi criada em 2013 por
       <a href="https://pt.wikipedia.org/wiki/Justin_Roiland" target="_blank">Justin Roiland</a>
       e
@@ -94,7 +99,7 @@
       <span class="btn" id="page">page:</span>
     </section>
   </main>
-  <section class="video" id="video"> Confira o video promocional da primeira temporada:    
+  <section class="video" id="video"> Confira o video promocional da primeira temporada: <!--Kelly alteração de texto de apresentação do vídeo--> -->   
     <iframe
       width="560"
       height="315"
