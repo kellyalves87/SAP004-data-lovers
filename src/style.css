@@ -121,7 +121,9 @@ nav a:hover {
   padding-right: 35px;
 }
 
-.statistics{
+.statistics{ /*inserção da position e top para que texto das estatísticas ficassem abaixo do menu*/
+  position: relative;
+  top: 80px;
   font-size: 16px;
   text-align: center;
   font-family: 'Oswald', sans-serif;
