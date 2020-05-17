@@ -3,7 +3,7 @@ body {
   margin: 0;
   width: 100%;
 }
-header {
+header { /* ALINE DAQUI PRA BAIXO*/
   text-align: center;
   position: fixed;
   /*z-index: 999;*/
@@ -72,11 +72,7 @@ nav li { /*espaçamento entre as opções*/
 .menu:checked ~ nav { /*ativa o menu*/
   transform: scale(1,1);
 } 
-/*.search-bar {
-  float: right;
-  margin: 10px 25px 10px;
-  width: 10px;
-}*/
+/*ALINE TIREI .SEARCH-BAR*/
 .search {
   border: none;
   border-bottom: 1.5px solid #0DF205;
@@ -102,7 +98,7 @@ nav li { /*espaçamento entre as opções*/
   border: none;
   outline-style: none;
 }
-.text {
+.text { /*ALINE*/
   margin: 30px;
 }
 .abstract {
@@ -228,7 +224,7 @@ footer {
   }
 
 @media screen and (min-width: 815px) {
-  header {
+  header { /*ALINE NAV UL LI MENU ABSTRACT ,TIREI O SEARCH*/
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
@@ -255,11 +251,6 @@ footer {
   .menu-label { 
     display: none;
   }
-  .search {
-    width: 150px;
-    top: 50px;
-    left: 90px;
-  }
   .abstract {
     margin: 10px;
     padding: 30px;
@@ -269,7 +260,7 @@ footer {
   img{
     margin: 5px;
   }
-  .root li{  /************************PAREI AQUI***********************/
+  .root li{ 
     margin-top: 100px;
     /*width: 50px;*/
   }
