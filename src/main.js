@@ -17,10 +17,12 @@ const dropDownLocalation = document.getElementById("location");
 dropDownLocalation.innerHTML = dropDown(sortDataNested(duplicatesLocation, "location", "name"), "location", "Localização");
 
 let abstract = document.getElementById("abstract");
+let iframe = document.getElementById("video"); // "Kelly" variável criada para esconder os vídeos nas opções do menu
 
 const status = document.getElementById("status");
 status.addEventListener("change", function () { 
-  abstract.style.display = "none"; 
+  abstract.style.display = "none";
+  iframe.style.display = "none"; // "Kelly" ação criada para esconder os vídeos nas opções do menu
   onChange(data.results, "status", status.value);
   const percentage = makeStatistics(data.results, "status", status.value);
 
