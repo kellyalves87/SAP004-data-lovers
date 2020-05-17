@@ -280,7 +280,7 @@ footer {
   }
   .root li{  /************************PAREI AQUI***********************/
     margin-top: 100px;
-    /*width: 50px;*/
+    /*width: auto;*/
   }
   .social-media {
     padding: 10px;
