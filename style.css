@@ -1,31 +1,80 @@
-.body {
-  overflow-x: hidden;
-  background-color: whitesmoke;
-}
-
-.navbar {
-  top: 100%;
+body {
+	background: white;
+  margin: 0;
   width: 100%;
-  overflow: hidden;
-  font-size: 13pt;
-  display: flex;
 }
-.home {
-  padding: 0px 30px;
-}
-.select, .active {
-  font-size: 20px; 
-  border: none;
-  border-radius: 5px;
-  text-shadow: 0 0 0.1em #0DF205;
-  color:#04ADBF;
+header {
   text-align: center;
-  width: 140px;
-  outline-style: none;
+  position: fixed;
+/* z-index: 999;*/
+  width: 100%;
+  margin: 0;
+  top: -3px;
 }
+.menu {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important; 
+}
+.menu-label { /*posição do menu*/
+  position: absolute;
+  top: 20px;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menu-label span, /*três risquinhos do menu*/
+.menu-label span::before,
+.menu-label span::after {
+  display: block;
+  background: rgb(50, 190, 92);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.menu-label span::before,
+.menu-label span::after {
+  content: '';
+  position: absolute;
+}
+.menu-label span::before { /*riquinho do menu*/
+  bottom: 7px; /*largura do risquinho*/
+}
+.menu-label span::after { /*outro risco*/
+  top: 7px; /*altura do risquinho*/
+}
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: scale(1, 0); /*efeito maneiro pro menu descer qnd clicar no hamburguer*/
+  transform-origin: top; /*abre o menu de cima para baixo*/
+  transition: transform 400ms ease-in-out; /*duração do efeito maneiro.Ease-in-out é uma transição com INICIO lento (nesse caso 400ms)*/ 
+}
+nav ul { /*deixa o menu do lado esquerdo*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li { /*espaçamento entre as opções*/
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+nav a:hover {
+  color: #000;
+}
+.menu:checked ~ nav { /*ativa o menu*/
+  transform: scale(1,1);
+} 
 .search-bar {
   float: right;
   margin: 10px 25px 10px;
+  width: 10px;
 }
 .search {
   border: none;
@@ -33,23 +82,51 @@
   width: 200px;
   outline: none;
   margin: 15px;
+  /*right: 500px;
+  position: relative;*/
 }
 .search::placeholder {
   color: #04ADBF;
   font-size: 15px;
 }
-.abstract { 
-  display: block; /*não esquecer de colocar no codigo da Aline*/
+.select, 
+.home {
+  width: 100px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 15px; 
+  color:#04ADBF;
+  text-shadow: 0 0 0.1em #0DF205;
+  text-align: center;
+  border: none;
+  outline-style: none;
+}
+.abstract {
+  display: block;
   font-size: 14pt;
-  margin: 170px;
+  margin: 0;
   line-height: 35px;
   padding: 8px;
   padding-left: 35px;
   padding-right: 35px;
 }
-.social-media {
-  display: block;
+
+.statistics{
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #04ADBF;  
 }
+
+.video { /* "Kelly" alteração no text-align, width, height e margin para centralizar o vídeo*/
+  text-align: center;
+  width: 560px;
+  height: auto;
+  margin: 0 auto;
+  font-family: 'Oswald', sans-serif;
+  color: #04ADBF;    
+}
+
 img {
   width: 150px;
   height: 150px;
@@ -60,21 +137,16 @@ img {
 main {
   width: 100%;
 }
-.root li { /*mudança nesta class para ajustar o tamanho dos cards e alinhá-los na paginação*/
+.root li { 
   border-radius: 10px;
   background-color: #56BF5D;
   margin: 20px;
   padding: 30px;
-  /*display: inline-block;
-  flex-wrap: wrap;
-  flex: 1 1 150px;
-  width: 14%;*/
-  /*text-align-last: left;*/
   font-size: 10px;
   font-family: 'Oswald', sans-serif;
   width: 15%;
 }
-.root{
+.root {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -82,16 +154,12 @@ main {
   text-align: center; 
   padding: 0;
 }
-.nav-list{
-  display: flex;
-  width: inherit;
-}
-.paragrafo {
+.paragraph {
   font-size: 16px;
   text-align: left;
   border-bottom: 1px solid #CCC;
 }
-.paragrafo-nome {
+.paragraph-name {
   font-size: 18px;
   text-align: center;
 }
@@ -99,6 +167,7 @@ main {
   font-size: 20px;
   text-decoration: none;
 }
+
 #btn-next {
   position: absolute;
   right: 15%;
@@ -107,22 +176,9 @@ main {
   position: absolute;
   left: 15%;
 }
-#button { /*id criada para sumir os botões da paginação prev e next*/
+#button { 
   visibility: hidden;
-}
-
-.video p{
-  font-family: 'Oswald', sans-serif;
-  color: #04ADBF;
-  text-align: center;
-}
-
-.video {
-  position: absolute;
-  width: 300px;
-  height: 100px;  
-  left: 250px;
-  right: 250px;
+  text-align: center; /* "Kelly" opção inclusa para centralizar o número de páginas*/
 }
 
 .social-media {
@@ -147,7 +203,9 @@ footer {
   font-size: 13pt;
   color: #04ADBF;
 }
-.social-media, .footer, .abstract, .select, .navbar, .btn, .dev, #root div, .active, .search::placeholder {
+.social-media, .footer, .abstract, .select,.navbar,
+.btn, .dev, #root div, .active, 
+.search::placeholder {
   font-family: 'Oswald', sans-serif;
 }
 .abstract, .footer, .social-media,  .follow, .dev {
@@ -160,10 +218,12 @@ footer {
 .abstract a{
   color: inherit;
 }
-.abstract, .social-media {
+.abstract,
+.social-media {
   border-radius: 10px;
 }
-.btn, .fa {
+.btn,
+.fa {
     color:#0DF205;
   }
   ::-webkit-scrollbar-track {
@@ -175,44 +235,62 @@ footer {
   ::-webkit-scrollbar-thumb {
     background: #0DF205;
   }
-  @media screen and (max-width: 815px) {
-    .navbar {
-      display: block; 
-    }
-    header{
-      position: fixed;
-      bottom: 0;
-    }
-    .select {
-      margin: 5px;
-      display: block;
-      width: 100%;
-    }
-    .search {
-      width: 150px;
-      top: 50px;
-      left: 90px;
-    }
-    .abstract {
-      margin: 20px;
-      padding: 20px;
-    }
-    img{
-      margin: 5px;
-    }
-    .root li{
-      width: 80%;
-      height: 420px;
-    }
-    .social-media {
-      padding: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 10px;
-      margin: 100px;
-      display: block;
-    }
-    .media {
-      display: inline;
-    }
+
+@media screen and (min-width: 815px) {
+  .menu-label { 
+    display: none;
   }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  nav {
+    all: unset; 
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+  }
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  .search {
+    width: 150px;
+    top: 50px;
+    left: 90px;
+  }
+  .abstract {
+    margin: 10px;
+    padding: 30px;
+    text-align: justify;
+    margin-top: 100px;
+  }
+  img{
+    margin: 5px;
+  }
+  .root li{  /************************PAREI AQUI***********************/
+    margin-top: 100px;
+    /*width: 50px;*/
+  }
+  .social-media {
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin: 100px;
+    display: block;
+  }
+  .media {
+    display: inline;
+  }
+}
