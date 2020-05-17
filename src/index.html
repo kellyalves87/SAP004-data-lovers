@@ -11,14 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li class="home">
-          <a class="active" href="index.html">Home</a>
-        </li>
-        <li>
-          <select id="status" class="select">
+    <header>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li class="home">
+            <a class="active" href="index.html">Home</a>
+          </li>
+          <li>
+            <select id="status" class="select">
             <option value="none" selected disabled>Status</option>
             <option value="Alive">Vivo</option>
             <option value="Dead">Morto</option>
@@ -63,19 +64,16 @@
             <option value="Z-A">Z-A</option>
           </select>
         </li>
-      </ul>
-      <label class="search-bar">
-        <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
+        </ul>
+        <label class="search-bar">
+          <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
+        </label>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
       </label>
-    </nav>
-  </header>
-  <input type="checkbox"  id="menu-hamb">
-    <label for="menu-hamb">
-      <div class="menu">
-    <span class="hamb"></span>
-      </div>
-    </label>
-
+    </header>
+  
   <section class="abstract" id="abstract">
     <p>
       A série Rick and Morty foi criada em 2013 por
@@ -104,7 +102,7 @@
     <p>Confira o video promocional da primeira temporada:</p>
     <iframe
       width="560"
-      height="315"
+      height="350"
       src="https://www.youtube.com/embed/WNhH00OIPP0"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
