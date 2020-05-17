@@ -6,7 +6,7 @@ body {
 header {
   text-align: center;
   position: fixed;
-/* z-index: 999;*/
+  /*z-index: 999;*/
   width: 100%;
   margin: 0;
   top: -3px;
@@ -18,7 +18,7 @@ header {
 }
 .menu-label { /*posição do menu*/
   position: absolute;
-  top: 20px;
+  top: 35px;
   left: 0;
   margin-left: 1em;
   height: 100%;
@@ -29,7 +29,7 @@ header {
 .menu-label span::before,
 .menu-label span::after {
   display: block;
-  background: rgb(50, 190, 92);
+  background: #0DF205;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -57,7 +57,7 @@ nav {
   transition: transform 400ms ease-in-out; /*duração do efeito maneiro.Ease-in-out é uma transição com INICIO lento (nesse caso 400ms)*/ 
 }
 nav ul { /*deixa o menu do lado esquerdo*/
-  margin: 0;
+  margin: 0px;
   padding: 0;
   list-style: none;
 }
@@ -65,17 +65,18 @@ nav li { /*espaçamento entre as opções*/
   margin-bottom: 1em;
   margin-left: 1em;
 }
-nav a:hover {
+.home:hover,
+.select:hover {
   color: #000;
 }
 .menu:checked ~ nav { /*ativa o menu*/
   transform: scale(1,1);
 } 
-.search-bar {
+/*.search-bar {
   float: right;
   margin: 10px 25px 10px;
   width: 10px;
-}
+}*/
 .search {
   border: none;
   border-bottom: 1.5px solid #0DF205;
@@ -94,12 +95,15 @@ nav a:hover {
   width: 100px;
   padding: 0px;
   margin: 0px;
-  font-size: 15px; 
+  font-size: 18px; 
   color:#04ADBF;
   text-shadow: 0 0 0.1em #0DF205;
   text-align: center;
   border: none;
   outline-style: none;
+}
+.text {
+  margin: 30px;
 }
 .abstract {
   display: block;
@@ -110,10 +114,12 @@ nav a:hover {
   padding-left: 35px;
   padding-right: 35px;
 }
-.video p{
+.video {
+  width: 560px;
+  height: auto;
+  margin: 0 auto;
   font-family: 'Oswald', sans-serif;
   color: #04ADBF;
-  text-align: center;
 }
 img {
   width: 150px;
@@ -196,11 +202,11 @@ footer {
 .abstract, .footer, .social-media,  .follow, .dev {
   color: #04ADBF;
 }
-.active{
+.active {
   color: inherit;
   text-decoration: none;
 }
-.abstract a{
+.abstract a {
   color: inherit;
 }
 .abstract,
@@ -222,9 +228,6 @@ footer {
   }
 
 @media screen and (min-width: 815px) {
-  .menu-label { 
-    display: none;
-  }
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
@@ -243,11 +246,14 @@ footer {
     align-items: center;
   }
   nav ul {
-    display: flex;
+  display: flex;
   }
   nav li {
     margin-left: 3em;
     margin-bottom: 0;
+  }
+  .menu-label { 
+    display: none;
   }
   .search {
     width: 150px;
