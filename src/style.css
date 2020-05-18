@@ -1,11 +1,14 @@
 body {
-	background: white;
+  background-color: white;
   margin: 0;
   width: 100%;
 }
-header { /* ALINE DAQUI PRA BAIXO*/
+
+header {
+  /* ALINE DAQUI PRA BAIXO*/
   text-align: center;
-  position: fixed;
+  position: absolute;
+  /*z-index: 999;*/
   width: 100%;
   margin: 0;
   top: -3px;
@@ -18,7 +21,9 @@ header { /* ALINE DAQUI PRA BAIXO*/
 .menu{
   display: none;
 }
-.menu-label { /*posição do menu*/
+
+.menu-label {
+  /*posição do menu*/
   position: absolute;
   top: 35px;
   left: 0;
@@ -27,6 +32,7 @@ header { /* ALINE DAQUI PRA BAIXO*/
   display: flex;
   align-items: center;
 }
+
 .menu-label span, /*três risquinhos do menu*/
 .menu-label span::before,
 .menu-label span::after {
@@ -37,79 +43,106 @@ header { /* ALINE DAQUI PRA BAIXO*/
   border-radius: 2px;
   position: relative;
 }
+
 .menu-label span::before,
 .menu-label span::after {
-  content: '';
+  content: "";
   position: absolute;
 }
-.menu-label span::before { /*riquinho do menu*/
+
+.menu-label span::before {
+  /*riquinho do menu*/
   bottom: 7px; /*largura do risquinho*/
 }
-.menu-label span::after { /*outro risco*/
+
+.menu-label span::after {
+  /*outro risco*/
   top: 7px; /*altura do risquinho*/
 }
+
 nav {
   position: absolute;
   text-align: left;
   top: 100%;
   left: 0;
   width: 100%;
-  transform: scale(1, 0); /*efeito maneiro pro menu descer qnd clicar no hamburguer*/
+  transform: scale(
+    1,
+    0
+  ); /*efeito maneiro pro menu descer qnd clicar no hamburguer*/
   transform-origin: top; /*abre o menu de cima para baixo*/
-  transition: transform 400ms ease-in-out; /*duração do efeito maneiro.Ease-in-out é uma transição com INICIO lento (nesse caso 400ms)*/ 
+  transition: transform 400ms ease-in-out; /*duração do efeito maneiro.Ease-in-out é uma transição com INICIO lento (nesse caso 400ms)*/
 }
-nav ul { /*deixa o menu do lado esquerdo*/
+
+nav ul {
+  /*deixa o menu do lado esquerdo*/
   margin: 0px;
   padding: 0;
   list-style: none;
 }
-nav li { /*espaçamento entre as opções*/
+
+nav li {
+  /*espaçamento entre as opções*/
   margin-bottom: 1em;
   margin-left: 1em;
 }
+
 nav a:hover {
   color: #000;
 }
-.menu:checked ~ nav { /*ativa o menu*/
-  transform: scale(1,1);
-} 
+
+.menu:checked ~ nav {
+  /*ativa o menu*/
+  transform: scale(1, 1);
+}
+
 .search-bar {
   float: right;
   margin: 10px 25px 10px;
   width: 10px;
-
 }
-.menu:checked ~ nav { /*ativa o menu*/
-  transform: scale(1,1);
-} 
+
+.menu:checked ~ nav {
+  /*ativa o menu*/
+  transform: scale(1, 1);
+}
+
 /*ALINE TIREI .SEARCH-BAR*/
 .search {
   border: none;
-  border-bottom: 1.5px solid #0DF205;
+  border-bottom: 1.5px solid #0df205;
   width: 200px;
   outline: none;
   margin: 15px;
+  font-size: 18px;
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
+  font-family: "Oswald", sans-serif;
   /*right: 500px;
   position: relative;*/
 }
+
 .search::placeholder {
-  color: #04ADBF;
+  color: #04adbf;
   font-size: 15px;
 }
-.select, 
+
+.select,
 .home {
   width: 100px;
   padding: 0px;
   margin: 0px;
-  font-size: 15px; 
-  color:#04ADBF;
-  text-shadow: 0 0 0.1em #0DF205;
+  font-size: 18px;
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
+  background-color: transparent;
   text-align: center;
   border: none;
   outline-style: none;
 }
 
-.text { /*ALINE*/
+.text {
+  /*ALINE*/
   margin: 30px;
 }
 
@@ -123,60 +156,69 @@ nav a:hover {
   padding-right: 35px;
 }
 
-.statistics{ /*inserção da position e top para que texto das estatísticas ficassem abaixo do menu*/
+.statistics {
+  /*inserção da position e top para que texto das estatísticas ficassem abaixo do menu*/
   position: relative;
   top: 80px;
   font-size: 16px;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
-  color: #04ADBF;  
+  font-family: "Oswald", sans-serif;
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
 }
 
-.video { /* "Kelly" alteração no text-align, width, height e margin para centralizar o vídeo*/
+.video {
+  /* "Kelly" alteração no text-align, width, height e margin para centralizar o vídeo*/
   text-align: center;
   width: 560px;
   height: auto;
   margin: 0 auto;
-  font-family: 'Oswald', sans-serif;
-  color: #04ADBF;    
+  font-family: "Oswald", sans-serif;
+  color: #04adbf;
 }
 
 img {
   width: 150px;
   height: 150px;
-  background-color: #D4D952;
+  background-color: #d4d952;
   padding: 3px;
   border-radius: 20px;
 }
+
 main {
   width: 100%;
 }
-.root li { 
+
+.root li {
   border-radius: 10px;
-  background-color: #56BF5D;
+  background-color: #56bf5d;
   margin: 20px;
   padding: 30px;
   font-size: 10px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   width: 15%;
 }
+
 .root {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  text-align: center; 
+  text-align: center;
   padding: 0;
 }
+
 .paragraph {
   font-size: 16px;
   text-align: left;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
+
 .paragraph-name {
   font-size: 18px;
   text-align: center;
 }
+
 .btn {
   font-size: 20px;
   text-decoration: none;
@@ -186,84 +228,116 @@ main {
   position: absolute;
   right: 15%;
 }
+
 #btn-prev {
   position: absolute;
   left: 15%;
 }
-#button { 
+
+#button {
   visibility: hidden;
   text-align: center; /* "Kelly" opção inclusa para centralizar o número de páginas*/
 }
 
 .social-media {
   display: block;
-  text-align: center; 
-  padding:15px;
-  padding-left:15px;
-  padding-right:15px;
-  padding-top:15px;
+  text-align: center;
+  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
 }
+
 .media {
   border: 2px solid transparent;
   display: inline-block;
   width: 35px;
 }
+
 .follow {
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   padding-left: 5px;
 }
+
 footer {
   font-size: 13pt;
-  color: #04ADBF;
+  color: #0df205;
 }
-.social-media, .footer, .abstract, .select,.navbar,
-.btn, .dev, #root div, .active, 
+
+.dev {
+  text-align: center;
+}
+
+.social-media,
+.footer,
+.abstract,
+.select,
+.navbar,
+.btn,
+.dev,
+#root div,
+.active,
 .search::placeholder {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
-.abstract, .footer, .social-media,  .follow, .dev {
-  color: #04ADBF;
+
+.abstract,
+.footer,
+.social-media,
+.follow,
+.dev {
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205
 }
+
 .active {
   color: inherit;
   text-decoration: none;
 }
+
 .abstract a {
   color: inherit;
 }
+
 .abstract,
 .social-media {
   border-radius: 10px;
 }
+
 .btn,
 .fa {
-    color:#0DF205;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #04ADBF;
-  }
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #0DF205;
-  }
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #04adbf;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0df205;
+}
 
 @media screen and (min-width: 815px) {
-  .menu-label { 
+  .menu-label {
     display: none;
   }
-  header { /*ALINE NAV UL LI MENU ABSTRACT ,TIREI O SEARCH*/
+
+  header {
+    /*ALINE NAV UL LI MENU ABSTRACT ,TIREI O SEARCH*/
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
+
   nav {
-    all: unset; 
+    all: unset;
     position: relative;
     text-align: left;
     transition: none;
-    transform: scale(1,1);
+    transform: scale(1, 1);
     background: none;
     top: initial;
     left: initial;
@@ -271,33 +345,45 @@ footer {
     justify-content: flex-end;
     align-items: center;
   }
+
   nav ul {
-  display: flex;
+    display: flex;
   }
+
   nav li {
     margin-left: 3em;
     margin-bottom: 0;
   }
+
   .search {
     width: 150px;
     top: 50px;
     left: 90px;
   }
-    
+
   .abstract {
     margin: 10px;
     padding: 30px;
     text-align: justify;
     margin-top: 100px;
   }
-    
-  img{
+
+  img {
     margin: 5px;
   }
+<<<<<<< HEAD
     
  .root li{ 
     margin-top: 100px;
+=======
+
+  .root li {
+    /************************PAREI AQUI***********************/
+    margin-top: 100px;
+    /*width: auto;*/
+>>>>>>> upstream/master
   }
+
   .social-media {
     padding: 10px;
     padding-left: 10px;
@@ -306,10 +392,8 @@ footer {
     margin: 100px;
     display: block;
   }
+
   .media {
     display: inline;
   }
-
 }
-
-
