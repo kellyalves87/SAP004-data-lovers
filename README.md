@@ -55,11 +55,11 @@ Após nossa pesquisa e mapeamento, desenvolvemos um novo protótipo de baixa qua
 
 Decidimos por fazer um protótipo de alta fidelidade para visualizar melhor nosso projeto e verificar se todo o nosso mapeamento está de acordo com o que entregaremos. 
 
-![Página Inicial](/assets/pagina-inicial.png) 
+[Página Inicial](/assets/pagina-inicial.png) 
 
-![Personagens](/assets/personagens.png) 
+[Personagens](/assets/personagens.png) 
 
-![Temporadas](/assets/temporadas.jpeg)
+[Temporadas](/assets/temporadas.jpeg)
 
 ## 6. Problemas de usuário
 
