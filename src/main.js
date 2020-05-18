@@ -76,6 +76,7 @@ sort.addEventListener("change", function () {
 
 const searchText = document.getElementById("search-name"); 
 searchText.addEventListener("keypress", function () {
+  iframe.style.display = "none";
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
   onChangeSearchName(data.results, "name", searchText.value);
 });
