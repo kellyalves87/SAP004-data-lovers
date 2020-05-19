@@ -11,7 +11,7 @@ body {
 header {
   /* ALINE DAQUI PRA BAIXO*/
   text-align: center;
-  position: absolute;
+  /* position: absolute; */
   /*z-index: 999;*/
   width: 100%;
   margin: 0;
@@ -19,9 +19,7 @@ header {
 }
 
 .menu {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
+  display: none;
 }
 
 .menu-label {
@@ -163,14 +161,14 @@ nav a:hover {
 
 .statistics {
   /*inserção da position e top para que texto das estatísticas ficassem abaixo do menu*/
-  position: relative;
-  top: 150px;
+  /* position: relative;
+  top: 150px; */
   font-size: 20px;
   text-align: center;
   font-family: "Oswald", sans-serif;
   color: #04adbf;
   text-shadow: 0 0 0.1em #0df205;
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 .video {
@@ -218,6 +216,18 @@ main {
   text-align: center;
   padding: 0;
   margin: 50px 0 0;
+}
+
+@media (max-width: 1500px) {
+  .root li {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 800px) {
+  .root li {
+    width: 100%;
+  }
 }
 
 .paragraph {
