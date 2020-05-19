@@ -5,24 +5,33 @@ import {
   onChange,
   onChangeSearchByNestedObject,
   onChangeSortData,
-  onChangeSearchName  
+  onChangeSearchName,
 } from "./event/event.js";
-import {nextPage, prevPage, resetPage} from "./pagination/pagination.js";
+import { nextPage, prevPage, resetPage } from "./pagination/pagination.js";
 
-const duplicatesOrigin = removeDuplicates(data.results, "origin"); 
+function hideElements() {
+  document.getElementById("abstract").style.display = "none";
+  document.getElementById("video").style.display = "none";
+}
+
+const duplicatesOrigin = removeDuplicates(data.results, "origin");
 const dropDownOrigin = document.getElementById("origin");
-dropDownOrigin.innerHTML = dropDown(sortDataNested(duplicatesOrigin, "origin", "name"), "origin", "Origem");
-const duplicatesLocation = removeDuplicates(data.results, "location"); 
+dropDownOrigin.innerHTML = dropDown(
+  sortDataNested(duplicatesOrigin, "origin", "name"),
+  "origin",
+  "Origem"
+);
+const duplicatesLocation = removeDuplicates(data.results, "location");
 const dropDownLocalation = document.getElementById("location");
-dropDownLocalation.innerHTML = dropDown(sortDataNested(duplicatesLocation, "location", "name"), "location", "Localização");
-
-let abstract = document.getElementById("abstract");
-let iframe = document.getElementById("video"); // "Kelly" variável criada para esconder os vídeos nas opções do menu
+dropDownLocalation.innerHTML = dropDown(
+  sortDataNested(duplicatesLocation, "location", "name"),
+  "location",
+  "Localização"
+);
 
 const status = document.getElementById("status");
-status.addEventListener("change", function () { 
-  abstract.style.display = "none";
-  iframe.style.display = "none"; // "Kelly" ação criada para esconder os vídeos nas opções do menu
+status.addEventListener("change", function () {
+  hideElements();
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
   onChange(data.results, "status", status.value);
   const percentage = makeStatistics(data.results, "status", status.value);
@@ -31,8 +40,9 @@ status.addEventListener("change", function () {
   result.innerHTML = `${percentage}% of characters in status are: ${status.value}`;
 });
 
-const gender = document.getElementById("gender"); 
+const gender = document.getElementById("gender");
 gender.addEventListener("change", function () {
+  hideElements();
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
   onChange(data.results, "gender", gender.value);
   const percentageGender = makeStatistics(data.results, "gender", gender.value);
@@ -41,48 +51,57 @@ gender.addEventListener("change", function () {
   result.innerHTML = `${percentageGender}% the gender of the characters are: ${gender.value}`;
 });
 
-const species = document.getElementById("species"); 
+const species = document.getElementById("species");
 species.addEventListener("change", function () {
+  hideElements();
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
   onChange(data.results, "species", species.value);
-  const percentageSpecies = makeStatistics(data.results, "species", species.value);
+  const percentageSpecies = makeStatistics(
+    data.results,
+    "species",
+    species.value
+  );
 
   let result = document.getElementById("statistics");
-  result.innerHTML = `${percentageSpecies}% of species of the characters are: ${species.value}`;   
+  result.innerHTML = `${percentageSpecies}% of species of the characters are: ${species.value}`;
 });
 
-const origin = document.getElementById("origin"); 
+const origin = document.getElementById("origin");
 origin.addEventListener("change", function () {
+  hideElements();
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
-  onChangeSearchByNestedObject(data.results, "origin", "name", origin.value); 
+  onChangeSearchByNestedObject(data.results, "origin", "name", origin.value);
 });
 
 const location = document.getElementById("location");
 location.addEventListener("change", function () {
+  hideElements();
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
-  onChangeSearchByNestedObject( 
+  onChangeSearchByNestedObject(
+    data.results,
     "location",
     "name",
     location.value
-  ); 
+  );
 });
 
-const sort = document.getElementById("sort"); 
-sort.addEventListener("change", function () { 
+const sort = document.getElementById("sort");
+sort.addEventListener("change", function () {
+  hideElements();
   const selectedIndex = sort.selectedIndex;
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
   onChangeSortData(data.results, "name", sort[selectedIndex].value);
 });
 
-const searchText = document.getElementById("search-name"); 
+const searchText = document.getElementById("search-name");
 searchText.addEventListener("keypress", function () {
-  iframe.style.display = "none";
+  hideElements();
   resetPage(); // "Kelly" função chamada do pagination.js para resetar a numeração de página toda vez que mudarmos as opções do menu
   onChangeSearchName(data.results, "name", searchText.value);
 });
 
-const nextPagination = document.getElementById("btn-next"); 
-nextPagination.addEventListener("click", function () { 
+const nextPagination = document.getElementById("btn-next");
+nextPagination.addEventListener("click", function () {
   nextPage();
 });
 
@@ -90,4 +109,3 @@ const prevPagination = document.getElementById("btn-prev");
 prevPagination.addEventListener("click", function () {
   prevPage();
 });
-
