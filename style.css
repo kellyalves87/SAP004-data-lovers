@@ -1,7 +1,11 @@
 body {
-  background-color: white;
-  margin: 0;
-  width: 100%;
+  background-color: black;
+}
+
+#logo {
+  background-color: transparent;
+  width: 340px;
+  cursor: pointer;
 }
 
 header {
@@ -11,7 +15,7 @@ header {
   /*z-index: 999;*/
   width: 100%;
   margin: 0;
-  top: -3px;
+  top: -3px;  
 }
 
 .menu {
@@ -94,11 +98,11 @@ nav a:hover {
   transform: scale(1, 1);
 }
 
-.search-bar {
+/* .search-bar {
   float: right;
   margin: 10px 25px 10px;
   width: 10px;
-}
+} */
 
 .menu:checked ~ nav {
   /*ativa o menu*/
@@ -109,20 +113,22 @@ nav a:hover {
 .search {
   border: none;
   border-bottom: 1.5px solid #0df205;
+  background-color: black;
   width: 200px;
   outline: none;
-  margin: 15px;
-  font-size: 18px;
+  margin: 100px;
+  font-size: 16px;
   color: #04adbf;
   text-shadow: 0 0 0.1em #0df205;
   font-family: "Oswald", sans-serif;
+  cursor: pointer;
   /*right: 500px;
   position: relative;*/
 }
 
 .search::placeholder {
   color: #04adbf;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .select,
@@ -130,23 +136,24 @@ nav a:hover {
   width: 100px;
   padding: 0px;
   margin: 0px;
-  font-size: 18px;
+  font-size: 19px;
   color: #04adbf;
   text-shadow: 0 0 0.1em #0df205;
   background-color: transparent;
   text-align: center;
   border: none;
   outline-style: none;
+  cursor: pointer;
 }
 
 .text {
   /*ALINE*/
-  margin: 30px;
+  margin: 50px;
 }
 
 .abstract {
   display: block;
-  font-size: 14pt;
+  font-size: 16pt;
   margin: 0;
   line-height: 35px;
   padding: 8px;
@@ -157,12 +164,13 @@ nav a:hover {
 .statistics {
   /*inserção da position e top para que texto das estatísticas ficassem abaixo do menu*/
   position: relative;
-  top: 80px;
-  font-size: 16px;
+  top: 150px;
+  font-size: 20px;
   text-align: center;
   font-family: "Oswald", sans-serif;
   color: #04adbf;
   text-shadow: 0 0 0.1em #0df205;
+  margin: 50px;
 }
 
 .video {
@@ -173,6 +181,11 @@ nav a:hover {
   margin: 0 auto;
   font-family: "Oswald", sans-serif;
   color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
+}
+
+#video { /*Kelly id criada para alterar tamanho do texto da chamada do vídeo e para fazer espaçamento vertical do texto e do vídeo*/
+  font-size: 20px;  
 }
 
 img {
@@ -204,6 +217,7 @@ main {
   flex-wrap: wrap;
   text-align: center;
   padding: 0;
+  margin: 50px 0 0;
 }
 
 .paragraph {
@@ -259,12 +273,12 @@ main {
 }
 
 footer {
-  font-size: 13pt;
+  font-size: 12pt;
   color: #0df205;
 }
 
 .dev {
-  text-align: center;
+  text-align: left;
 }
 
 .social-media,
@@ -286,7 +300,8 @@ footer {
 .follow,
 .dev {
   color: #04adbf;
-  text-shadow: 0 0 0.1em #0df205
+  text-shadow: 0 0 0.1em #0df205;
+  margin: 0px;
 }
 
 .active {
@@ -300,7 +315,7 @@ footer {
 
 .abstract,
 .social-media {
-  border-radius: 10px;
+  border-radius: 10px;  
 }
 
 .btn,
@@ -371,9 +386,7 @@ footer {
   }
 
   .root li {
-    /************************PAREI AQUI***********************/
-    margin-top: 100px;
-    /*width: auto;*/
+    margin-top: 100px;    
   }
 
   .social-media {
@@ -383,6 +396,7 @@ footer {
     padding-top: 10px;
     margin: 100px;
     display: block;
+    font-size: x-large;
   }
 
   .media {
