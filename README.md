@@ -44,22 +44,22 @@ Durante o nosso mapeamento e pequisa de usuário identificamos que:
 ## 3. Desenho de interface de usuário
 
 No primeiro esboço feito antes de todo o mapeamento e pesquisa com os usuários, havíamos optado por uma interface onde nos apresentaria um
-menu com itens que nos trouxessem cards com todas as informações sobre o personagem. Você pode visualizá-lo [**aqui**](/assets/PrimeiroPrototipo.png).
+menu com itens que nos trouxessem cards com todas as informações sobre o personagem. Você pode visualizá-lo [**aqui**](./src/assets/PrimeiroPrototipo.png).
 Porém, após toda a nossa pesquisa identificamos que não seria funcional ter um menu que nos trouxesse praticamente as mesmas informações, e ainda faria o usuário perder muito tempo clicando em várias telas sem necessidade. 
 
 ## 4. Protótipo de baixa qualidade
 
-Após nossa pesquisa e mapeamento, desenvolvemos um novo protótipo de baixa qualidade onde o usuário teria um menu dropdwn de personagens e temporadas na página principal e dentro de cada item do menu, o usuário tem disponível um filtro onde pode buscar por ordem alfabetica, nome de personagem, episódios, temporadas, etc. Você pode visualizá-lo [**aqui**](/assets/PrototipoFinal.png).
+Após nossa pesquisa e mapeamento, desenvolvemos um novo protótipo de baixa qualidade onde o usuário teria um menu dropdwn de personagens e temporadas na página principal e dentro de cada item do menu, o usuário tem disponível um filtro onde pode buscar por ordem alfabetica, nome de personagem, episódios, temporadas, etc. Você pode visualizá-lo [**aqui**](./src/assets/PrototipoFinal.png).
 
 ## 5. Protótipo de alta qualidade
 
 Decidimos por fazer um protótipo de alta fidelidade para visualizar melhor nosso projeto e verificar se todo o nosso mapeamento está de acordo com o que entregaremos. 
 
-[Página Inicial](/assets/pagina-inicial.png) 
+[Página Inicial](./src/assets/pagina-inicial.png) 
 
-[Personagens](/assets/personagens.png) 
+[Personagens](./src/assets/personagens.png) 
 
-[Temporadas](/assets/temporadas.jpeg)
+[Temporadas](./src/assets/temporadas.jpeg)
 
 ## 6. Problemas de usuário
 

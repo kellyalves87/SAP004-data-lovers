@@ -119,6 +119,8 @@ nav a:hover {
 
 .text {
   text-align: left;
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
 }
 
 .abstract {
@@ -149,7 +151,7 @@ nav a:hover {
   text-shadow: 0 0 0.1em #0df205;
 }
 
-#video {
+#video-promo {
   font-size: 20px;  
 }
 
@@ -255,6 +257,7 @@ main {
 footer {
   font-size: 12pt;
   color: #0df205;
+  text-shadow: 0 0 0.1em #0df205;
 }
 
 .dev {
