@@ -26,7 +26,6 @@ header {
   right: 0;
   margin-right: 4em;
   height: 100%;
-  /* display: flex; */
   align-items: center;
 }
 
@@ -56,15 +55,10 @@ header {
 }
 
 nav {
-  /* position: absolute; */
   text-align: left;
-  /* top: 100%; */
   left: 0;
   width: 100%;
-  transform: scale(
-    1,
-    0
-  );
+  transform: scale(1,0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
@@ -73,6 +67,7 @@ nav ul {
   margin: 0px;
   padding: 0;
   list-style: none;
+  float: right;
 }
 
 nav li {  
@@ -85,10 +80,6 @@ nav a:hover {
 }
 
 .menu:checked ~ nav { 
-  transform: scale(1, 1);
-}
-
-.menu:checked ~ nav {
   transform: scale(1, 1);
 }
 
@@ -118,7 +109,7 @@ nav a:hover {
   margin: 0px;
   font-size: 19px;
   color: #04adbf;
-  text-shadow: 0 0 0.1em #0df205;
+  text-shadow: 0 0 0.2em #0df205;
   background-color: transparent;
   text-align: center;
   border: none;
@@ -127,7 +118,9 @@ nav a:hover {
 }
 
 .text {
-  text-align: center;
+  text-align: left;
+  color: #04adbf;
+  text-shadow: 0 0 0.1em #0df205;
 }
 
 .abstract {
@@ -158,7 +151,7 @@ nav a:hover {
   text-shadow: 0 0 0.1em #0df205;
 }
 
-#video {
+#video-promo {
   font-size: 20px;  
 }
 
@@ -181,7 +174,6 @@ main {
   padding: 30px;
   font-size: 10px;
   font-family: "Oswald", sans-serif;
-  width: 15%;
 }
 
 .root {
@@ -192,6 +184,10 @@ main {
   text-align: center;
   padding: 0;
   margin: 50px 0 0;
+}
+
+.fa {
+  margin: 10px;
 }
 
 @media (max-width: 1500px) {
@@ -247,7 +243,7 @@ main {
 }
 
 .media {
-  border: 2px solid transparent;
+  border: 2px ;
   display: inline-block;
   width: 35px;
 }
@@ -261,6 +257,7 @@ main {
 footer {
   font-size: 12pt;
   color: #0df205;
+  text-shadow: 0 0 0.1em #0df205;
 }
 
 .dev {
@@ -274,8 +271,8 @@ footer {
 .navbar,
 .btn,
 .dev,
-#root div,
 .active,
+#root div,
 .search::placeholder {
   font-family: "Oswald", sans-serif;
 }
@@ -286,8 +283,6 @@ footer {
 .follow,
 .dev {
   color: #04adbf;
-  text-shadow: 0 0 0.1em #0df205;
-  margin: 0px;
 }
 
 .active {
@@ -375,10 +370,7 @@ footer {
   }
 
   .social-media {
-    padding: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding: 10px 10px 10px 10px;
     margin: 100px;
     display: block;
     font-size: x-large;

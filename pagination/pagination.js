@@ -61,6 +61,6 @@ export function numPages() {
   return Math.ceil(currentArray.length / recordsPerPage);
 }
 
-export function resetPage(){ // "Kelly" função criada para resetar a numeração de página toda vez que mudarmos as opções do menu
+export function resetPage(){
   currentPage = 1;
 }
