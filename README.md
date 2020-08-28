@@ -103,6 +103,6 @@ Acesse pelo link: https://kellyalves87.github.io/SAP004-data-lovers/
 
 ## 11. Autores
 
-Aline Souza e Kelly Alves
+* [Aline Souza](https://github.com/AlineSanqueza) e [Kelly Alves](https://github.com/kellyalves87)
 
 
