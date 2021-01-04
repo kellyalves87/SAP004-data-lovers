@@ -1,6 +1,6 @@
-import {generateCard} from "../card/card.js";
+import { generateCard } from "../card/card.js";
 
-let currentPage = 1; 
+let currentPage = 1;
 let recordsPerPage = 10;
 let currentArray = [];
 
@@ -18,9 +18,9 @@ export function nextPage() {
   }
 }
 
-export function pagination(list){
-    currentArray = list;
-    changePage(currentPage, list);
+export function pagination(list) {
+  currentArray = list;
+  changePage(currentPage, list);
 }
 
 function changePage(page, resultArray) {
@@ -28,21 +28,21 @@ function changePage(page, resultArray) {
   let btnPrev = document.getElementById("btn-prev");
   let root = document.getElementById("root");
   let pageSpan = document.getElementById("page");
-  
+
   if (page < 1) page = 1;
   if (page > numPages()) page = numPages();
 
   root.innerHTML = "";
 
-  for (let i = (page - 1) * recordsPerPage; i < (page * recordsPerPage); i++) {
-    if(i == resultArray.length){
-        break;
+  for (let i = (page - 1) * recordsPerPage; i < page * recordsPerPage; i++) {
+    if (i == resultArray.length) {
+      break;
     }
     root.innerHTML += generateCard(resultArray[i], i);
   }
 
   pageSpan.innerHTML = page;
-  pageSpan.style.visibility = "visible"; 
+  pageSpan.style.visibility = "visible";
 
   if (page === 1) {
     btnPrev.style.visibility = "hidden";
@@ -61,6 +61,6 @@ export function numPages() {
   return Math.ceil(currentArray.length / recordsPerPage);
 }
 
-export function resetPage(){
+export function resetPage() {
   currentPage = 1;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,19 +8,20 @@
   <link rel="shortcut-icon" type="image-icon" href="/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="reset.css">  
+  <link rel="stylesheet" href="reset.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-      <a href="index.html">
+  <header>
+    <a href="index.html">
       <img src="./assets/logo-rick-and-morty.png" alt="logo-rick-and-morty" id="logo">
     </a>
-      <input type="checkbox" id="menu" class="menu">
-      <nav>
-        <ul>          
-          <li>
-            <select id="status" class="select">
+    <input type="checkbox" id="menu" class="menu">
+    <nav>
+      <ul>
+        <li>
+          <select id="status" class="select">
             <option value="none" selected disabled>Status</option>
             <option value="Alive">Vivo</option>
             <option value="Dead">Morto</option>
@@ -64,15 +66,17 @@
             <option value="Z-A">Z-A</option>
           </select>
         </li>
-        </ul>
-        <label class="search-bar">
-          <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
-        </label>
-      </nav>
-      <label for="menu" class="menu-label">
-        <span></span>
+      </ul>
+      <label class="search-bar">
+        <input type="text" class="search" id="search-name" placeholder="Pesquisar por nome..." />
       </label>
-    </header>
+    </nav>
+    <label for="menu" class="menu-label">
+      <span></span>
+    </label>
+  </header>
+
+  <div id="like_button_container"></div>
 
   <section class="abstract" id="abstract">
     <p class="text">
@@ -89,7 +93,7 @@
       problemas conjugais, e TV a cabo, Rick and Morty é uma série sobre a
       nossa insignificância perante a tudo o que existe.
     </p>
-  </section>  
+  </section>
   <main>
     <section id="statistics" class="statistics"></section>
     <ul id="root" class="root"></ul>
@@ -99,28 +103,24 @@
       <span class="btn" id="page">page:</span>
     </section>
   </main>
-  <section id="video" class="video"> 
-    <p id="video-promo">Confira o video promocional da primeira temporada:</p> 
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/WNhH00OIPP0"
-      frameborder="0"
-      scrolling="no"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+  <section id="video" class="video">
+    <p id="video-promo">Confira o video promocional da primeira temporada:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WNhH00OIPP0" frameborder="0" scrolling="no"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </section>
   <footer>
-    <section class="social-media">      
+    <section class="social-media">
       <p class="follow">Rick and Morty</p>
       <a href="https://www.facebook.com/RickandMorty/" target="_blank" class="media"><i class="fa fa-facebook"></i></a>
       <a href="https://www.instagram.com/rickandmorty/?hl=en" target="_blank" class="media"><i
           class="fa fa-instagram"></i></a>
       <a href="https://www.youtube.com/channel/UCel52OboABOS8kqa4PW37FA" target="_blank" class="media"><i
           class="fa fa-youtube"></i></a>
-    </section>    
+    </section>
     <p class="dev">© Desenvolvido por Aline Souza e Kelly Alves</p>
-  </footer>  
-  <script src="main.js" type="module"></script>    
+  </footer>
+
+  <script src="main.js" type="module"></script>
 </body>
-</html> 
+
+</html>

@@ -42,15 +42,15 @@ export function searchName(data, name, value) {
 
 export function makeStatistics(data, name, value) {
   if (!data || !name) {
-    throw TypeError('no data has been provided');
+    throw TypeError("no data has been provided");
   }
 
-  let typeName = 0
+  let typeName = 0;
   for (let i = 0; i < data.length; i++) {
     if (data[i][name].includes(value)) {
       typeName++;
     }
   }
-  let finalPercentage = typeName / data.length * 100;
+  let finalPercentage = (typeName / data.length) * 100;
   return finalPercentage.toFixed(2);
 }
